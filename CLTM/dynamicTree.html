@@ -1,0 +1,5699 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | DataSet</title>
+
+  <style type="text/css">
+    html, body {
+      font: 11pt arial;
+    }
+
+    h1 {
+      font-size: 150%;
+      margin: 5px 0;
+    }
+
+    h2 {
+      font-size: 100%;
+      margin: 5px 0;
+    }
+
+    table.view {
+      width: 100%;
+    }
+
+    table td {
+      vertical-align: top;
+    }
+
+    table table {
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+    }
+
+    table table td {
+      vertical-align: middle;
+    }
+
+    input[type=text], pre {
+      border: 1px solid lightgray;
+    }
+
+    pre {
+      margin: 0;
+      padding: 5px;
+      font-size: 10pt;
+    }
+
+    #network {
+      width: 100%;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    var nodes, edges, network;
+
+    // convenience method to stringify a JSON object
+    function toJSON (obj) {
+      return JSON.stringify(obj, null, 4);
+    }
+///////////Data
+
+var time_length = 8;
+function data_Nodes_TobeAdded(local_time_stamp){
+	switch(local_time_stamp){
+		case 0:
+		{Nodes_TobeAdded =[
+			{
+			            "group": 2,
+			            "id": 226,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 227,
+			            "label": "h",
+			            "links": 78
+        }
+			];
+		break;
+		}
+		case 1:
+		{Nodes_TobeAdded =[
+			{
+            "group": 2,
+            "id": 228,
+            "label": "h",
+            "links": 14
+        },
+        {
+            "group": 2,
+            "id": 229,
+            "label": "h",
+            "links": 3
+        },
+        {
+            "group": 2,
+            "id": 230,
+            "label": "h",
+            "links": 14
+        }
+        ];
+        break;
+        }
+
+        case 2:
+		{Nodes_TobeAdded =[
+			 {
+			            "group": 2,
+			            "id": 231,
+			            "label": "h",
+			            "links": 8
+        }
+		];
+		break;
+        }
+
+        case 3:
+		{Nodes_TobeAdded =[
+			{
+				"group": 2,
+				"id": 232,
+				"label": "h",
+				"links": 6
+			},
+			{
+				"group": 2,
+				"id": 233,
+				"label": "h",
+			}
+		];
+		break;
+        }
+
+        case 4:
+		{Nodes_TobeAdded =[
+			{
+				"group": 2,
+				"id": 234,
+				"label": "h",
+				"links": 6
+        }
+		];
+		break;
+        }
+
+        case 5:
+		{Nodes_TobeAdded =[
+			{
+			"group": 2,
+			"id": 235,
+			"label": "h",
+			"links": 5
+        }
+		];
+		break;
+        }
+
+		case 6:
+		{Nodes_TobeAdded =[
+			{
+			"group": 2,
+			"id": 236,
+			"label": "h",
+			"links": 5
+        }
+		];
+		break;
+        }
+
+		case 7:
+		{Nodes_TobeAdded =[
+			{
+			            "group": 2,
+			            "id": 237,
+			            "label": "h",
+			            "links": 5
+			        },
+			        {
+			            "group": 2,
+			            "id": 238,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 239,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 240,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 241,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 242,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 243,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 244,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 245,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 246,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 247,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 248,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 249,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 250,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 251,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 252,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 253,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 254,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 255,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 256,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 257,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 258,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 259,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 260,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 261,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 262,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 263,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 264,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 265,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 266,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 267,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 268,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 269,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 270,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 271,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 272,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 273,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 274,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 275,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 276,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 277,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 278,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 279,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 280,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 281,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 282,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 283,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 284,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 285,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 286,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 287,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 288,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 289,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 290,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 291,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 292,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 293,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 294,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 295,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 296,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 297,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 298,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 299,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 300,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 301,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 302,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 303,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 304,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 305,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 306,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 307,
+			            "label": "h",
+			            "links": 4
+			        },
+			        {
+			            "group": 2,
+			            "id": 308,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 309,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 310,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 311,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 312,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 313,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 314,
+			            "label": "h",
+			            "links": 3
+			        },
+			        {
+			            "group": 2,
+			            "id": 315,
+			            "label": "h",
+			            "links": 3
+        }
+		];
+		break;
+}
+
+	}
+	return Nodes_TobeAdded;
+}
+
+function data_Edges_TobeAdded(local_time_stamp){
+	switch(local_time_stamp){
+
+	case 0:
+	{Edges_TobeAdded=[
+				        {
+				            "from": 226,
+				            "id": 226104,
+				            "to": 104
+				        },
+				        {
+				            "from": 226,
+				            "id": 226112,
+				            "to": 112
+				        },
+				        {
+				            "from": 226,
+				            "id": 226219,
+				            "to": 219
+				        },
+				        {
+				            "from": 227,
+				            "id": 227001,
+				            "to": 1
+				        },
+				        {
+				            "from": 227,
+				            "id": 227002,
+				            "to": 2
+				        },
+				        {
+				            "from": 227,
+				            "id": 227007,
+				            "to": 7
+				        },
+				        {
+				            "from": 227,
+				            "id": 227010,
+				            "to": 10
+				        },
+				        {
+				            "from": 227,
+				            "id": 227012,
+				            "to": 12
+				        },
+				        {
+				            "from": 227,
+				            "id": 227013,
+				            "to": 13
+				        },
+				        {
+				            "from": 227,
+				            "id": 227021,
+				            "to": 21
+				        },
+				        {
+				            "from": 227,
+				            "id": 227022,
+				            "to": 22
+				        },
+				        {
+				            "from": 227,
+				            "id": 227026,
+				            "to": 26
+				        },
+				        {
+				            "from": 227,
+				            "id": 227027,
+				            "to": 27
+				        },
+				        {
+				            "from": 227,
+				            "id": 227029,
+				            "to": 29
+				        },
+				        {
+				            "from": 227,
+				            "id": 227031,
+				            "to": 31
+				        },
+				        {
+				            "from": 227,
+				            "id": 227032,
+				            "to": 32
+				        },
+				        {
+				            "from": 227,
+				            "id": 227033,
+				            "to": 33
+				        },
+				        {
+				            "from": 227,
+				            "id": 227039,
+				            "to": 39
+				        },
+				        {
+				            "from": 227,
+				            "id": 227040,
+				            "to": 40
+				        },
+				        {
+				            "from": 227,
+				            "id": 227050,
+				            "to": 50
+				        },
+				        {
+				            "from": 227,
+				            "id": 227051,
+				            "to": 51
+				        },
+				        {
+				            "from": 227,
+				            "id": 227052,
+				            "to": 52
+				        },
+				        {
+				            "from": 227,
+				            "id": 227054,
+				            "to": 54
+				        },
+				        {
+				            "from": 227,
+				            "id": 227061,
+				            "to": 61
+				        },
+				        {
+				            "from": 227,
+				            "id": 227063,
+				            "to": 63
+				        },
+				        {
+				            "from": 227,
+				            "id": 227065,
+				            "to": 65
+				        },
+				        {
+				            "from": 227,
+				            "id": 227068,
+				            "to": 68
+				        },
+				        {
+				            "from": 227,
+				            "id": 227069,
+				            "to": 69
+				        },
+				        {
+				            "from": 227,
+				            "id": 227070,
+				            "to": 70
+				        },
+				        {
+				            "from": 227,
+				            "id": 227073,
+				            "to": 73
+				        },
+				        {
+				            "from": 227,
+				            "id": 227076,
+				            "to": 76
+				        },
+				        {
+				            "from": 227,
+				            "id": 227078,
+				            "to": 78
+				        },
+				        {
+				            "from": 227,
+				            "id": 227080,
+				            "to": 80
+				        },
+				        {
+				            "from": 227,
+				            "id": 227083,
+				            "to": 83
+				        },
+				        {
+				            "from": 227,
+				            "id": 227084,
+				            "to": 84
+				        },
+				        {
+				            "from": 227,
+				            "id": 227089,
+				            "to": 89
+				        },
+				        {
+				            "from": 227,
+				            "id": 227091,
+				            "to": 91
+				        },
+				        {
+				            "from": 227,
+				            "id": 227098,
+				            "to": 98
+				        },
+				        {
+				            "from": 227,
+				            "id": 227102,
+				            "to": 102
+				        },
+				        {
+				            "from": 227,
+				            "id": 227105,
+				            "to": 105
+				        },
+				        {
+				            "from": 227,
+				            "id": 227106,
+				            "to": 106
+				        },
+				        {
+				            "from": 227,
+				            "id": 227110,
+				            "to": 110
+				        },
+				        {
+				            "from": 227,
+				            "id": 227113,
+				            "to": 113
+				        },
+				        {
+				            "from": 227,
+				            "id": 227115,
+				            "to": 115
+				        },
+				        {
+				            "from": 227,
+				            "id": 227120,
+				            "to": 120
+				        },
+				        {
+				            "from": 227,
+				            "id": 227125,
+				            "to": 125
+				        },
+				        {
+				            "from": 227,
+				            "id": 227128,
+				            "to": 128
+				        },
+				        {
+				            "from": 227,
+				            "id": 227130,
+				            "to": 130
+				        },
+				        {
+				            "from": 227,
+				            "id": 227132,
+				            "to": 132
+				        },
+				        {
+				            "from": 227,
+				            "id": 227137,
+				            "to": 137
+				        },
+				        {
+				            "from": 227,
+				            "id": 227139,
+				            "to": 139
+				        },
+				        {
+				            "from": 227,
+				            "id": 227142,
+				            "to": 142
+				        },
+				        {
+				            "from": 227,
+				            "id": 227144,
+				            "to": 144
+				        },
+				        {
+				            "from": 227,
+				            "id": 227149,
+				            "to": 149
+				        },
+				        {
+				            "from": 227,
+				            "id": 227156,
+				            "to": 156
+				        },
+				        {
+				            "from": 227,
+				            "id": 227157,
+				            "to": 157
+				        },
+				        {
+				            "from": 227,
+				            "id": 227158,
+				            "to": 158
+				        },
+				        {
+				            "from": 227,
+				            "id": 227159,
+				            "to": 159
+				        },
+				        {
+				            "from": 227,
+				            "id": 227161,
+				            "to": 161
+				        },
+				        {
+				            "from": 227,
+				            "id": 227165,
+				            "to": 165
+				        },
+				        {
+				            "from": 227,
+				            "id": 227173,
+				            "to": 173
+				        },
+				        {
+				            "from": 227,
+				            "id": 227175,
+				            "to": 175
+				        },
+				        {
+				            "from": 227,
+				            "id": 227176,
+				            "to": 176
+				        },
+				        {
+				            "from": 227,
+				            "id": 227181,
+				            "to": 181
+				        },
+				        {
+				            "from": 227,
+				            "id": 227182,
+				            "to": 182
+				        },
+				        {
+				            "from": 227,
+				            "id": 227186,
+				            "to": 186
+				        },
+				        {
+				            "from": 227,
+				            "id": 227187,
+				            "to": 187
+				        },
+				        {
+				            "from": 227,
+				            "id": 227188,
+				            "to": 188
+				        },
+				        {
+				            "from": 227,
+				            "id": 227189,
+				            "to": 189
+				        },
+				        {
+				            "from": 227,
+				            "id": 227191,
+				            "to": 191
+				        },
+				        {
+				            "from": 227,
+				            "id": 227195,
+				            "to": 195
+				        },
+				        {
+				            "from": 227,
+				            "id": 227198,
+				            "to": 198
+				        },
+				        {
+				            "from": 227,
+				            "id": 227201,
+				            "to": 201
+				        },
+				        {
+				            "from": 227,
+				            "id": 227207,
+				            "to": 207
+				        },
+				        {
+				            "from": 227,
+				            "id": 227210,
+				            "to": 210
+				        },
+				        {
+				            "from": 227,
+				            "id": 227211,
+				            "to": 211
+				        },
+				        {
+				            "from": 227,
+				            "id": 227212,
+				            "to": 212
+				        },
+				        {
+				            "from": 227,
+				            "id": 227214,
+				            "to": 214
+				        },
+				        {
+				            "from": 227,
+				            "id": 227221,
+				            "to": 221
+				        },
+				        {
+				            "from": 227,
+				            "id": 227225,
+				            "to": 225
+				        },
+				        {
+				            "from": 227,
+				            "id": 227226,
+				            "to": 226
+				        }
+	];
+	break;
+	}
+
+	case 1:
+	{Edges_TobeAdded=[
+	        {
+            "from": 228,
+            "id": 228015,
+            "to": 15
+        },
+        {
+            "from": 228,
+            "id": 228126,
+            "to": 126
+        },
+        {
+            "from": 228,
+            "id": 228135,
+            "to": 135
+        },
+        {
+            "from": 228,
+            "id": 228136,
+            "to": 136
+        },
+        {
+            "from": 228,
+            "id": 228138,
+            "to": 138
+        },
+        {
+            "from": 228,
+            "id": 228151,
+            "to": 151
+        },
+        {
+            "from": 228,
+            "id": 228167,
+            "to": 167
+        },
+        {
+            "from": 228,
+            "id": 228179,
+            "to": 179
+        },
+        {
+            "from": 228,
+            "id": 228190,
+            "to": 190
+        },
+        {
+            "from": 228,
+            "id": 228202,
+            "to": 202
+        },
+        {
+            "from": 228,
+            "id": 228206,
+            "to": 206
+        },
+        {
+            "from": 228,
+            "id": 228209,
+            "to": 209
+        },
+        {
+            "from": 228,
+            "id": 228224,
+            "to": 224
+        },
+        {
+            "from": 229,
+            "id": 229104,
+            "to": 104
+        },
+        {
+            "from": 229,
+            "id": 229226,
+            "to": 226
+        },
+        {
+            "from": 230,
+            "id": 230024,
+            "to": 24
+        },
+        {
+            "from": 230,
+            "id": 230044,
+            "to": 44
+        },
+        {
+            "from": 230,
+            "id": 230045,
+            "to": 45
+        },
+        {
+            "from": 230,
+            "id": 230059,
+            "to": 59
+        },
+        {
+            "from": 230,
+            "id": 230060,
+            "to": 60
+        },
+        {
+            "from": 230,
+            "id": 230067,
+            "to": 67
+        },
+        {
+            "from": 230,
+            "id": 230088,
+            "to": 88
+        },
+        {
+            "from": 230,
+            "id": 230092,
+            "to": 92
+        },
+        {
+            "from": 230,
+            "id": 230094,
+            "to": 94
+        },
+        {
+            "from": 230,
+            "id": 230114,
+            "to": 114
+        },
+        {
+            "from": 230,
+            "id": 230116,
+            "to": 116
+        },
+        {
+            "from": 230,
+            "id": 230123,
+            "to": 123
+        },
+        {
+            "from": 230,
+            "id": 230228,
+            "to": 228
+        },
+        {
+            "from": 230,
+            "id": 230229,
+            "to": 229
+        }
+        ];
+        break;
+        }
+
+        case 2:
+	{Edges_TobeAdded=[
+		                {
+				            "from": 231,
+				            "id": 231009,
+				            "to": 9
+				        },
+				        {
+				            "from": 231,
+				            "id": 231032,
+				            "to": 32
+				        },
+				        {
+				            "from": 231,
+				            "id": 231036,
+				            "to": 36
+				        },
+				        {
+				            "from": 231,
+				            "id": 231037,
+				            "to": 37
+				        },
+				        {
+				            "from": 231,
+				            "id": 231099,
+				            "to": 99
+				        },
+				        {
+				            "from": 231,
+				            "id": 231169,
+				            "to": 169
+				        },
+				        {
+				            "from": 231,
+				            "id": 231208,
+				            "to": 208
+				        },
+				        {
+				            "from": 231,
+				            "id": 231227,
+				            "to": 227
+        }
+	];
+	break;
+	}
+
+	    case 3:
+	{Edges_TobeAdded=[
+		         {
+				            "from": 232,
+				            "id": 232000,
+				            "to": 0
+				        },
+				        {
+				            "from": 232,
+				            "id": 232008,
+				            "to": 8
+				        },
+				        {
+				            "from": 232,
+				            "id": 232066,
+				            "to": 66
+				        },
+				        {
+				            "from": 232,
+				            "id": 232077,
+				            "to": 77
+				        },
+				        {
+				            "from": 232,
+				            "id": 232166,
+				            "to": 166
+				        },
+				        {
+				            "from": 233,
+				            "id": 233219,
+				            "to": 219
+				        },
+				        {
+				            "from": 233,
+				            "id": 233226,
+				            "to": 226
+				        },
+				        {
+				            "from": 233,
+				            "id": 233232,
+				            "to": 232
+        }
+		];
+		break;
+		}
+
+		case 4:
+	{Edges_TobeAdded=[
+			{
+				"from": 234,
+				"id": 234071,
+				"to": 71
+			},
+			{
+				"from": 234,
+				"id": 234075,
+				"to": 75
+			},
+			{
+				"from": 234,
+				"id": 234088,
+				"to": 88
+			},
+			{
+				"from": 234,
+				"id": 234152,
+				"to": 152
+			},
+			{
+				"from": 234,
+				"id": 234154,
+				"to": 154
+			},
+			{
+				"from": 234,
+				"id": 234230,
+				"to": 230
+        }
+		];
+		break;
+		}
+
+		case 5:
+	{Edges_TobeAdded=[
+		 {
+				"from": 235,
+				"id": 235039,
+				"to": 39
+			},
+			{
+				"from": 235,
+				"id": 235041,
+				"to": 41
+			},
+			{
+				"from": 235,
+				"id": 235072,
+				"to": 72
+			},
+			{
+				"from": 235,
+				"id": 235082,
+				"to": 82
+			},
+			{
+				"from": 235,
+				"id": 235227,
+				"to": 227
+        }
+		];
+		break;
+		}
+
+		case 6:
+	{Edges_TobeAdded=[
+			 {
+				"from": 236,
+				"id": 236133,
+				"to": 133
+			},
+			{
+				"from": 236,
+				"id": 236173,
+				"to": 173
+			},
+			{
+				"from": 236,
+				"id": 236174,
+				"to": 174
+			},
+			{
+				"from": 236,
+				"id": 236204,
+				"to": 204
+			},
+			{
+				"from": 236,
+				"id": 236227,
+				"to": 227
+        }
+		];
+		break;
+		}
+
+		case 7:
+	{Edges_TobeAdded=[
+		        {
+		            "from": 237,
+		            "id": 237197,
+		            "to": 197
+		        },
+		        {
+		            "from": 237,
+		            "id": 237198,
+		            "to": 198
+		        },
+		        {
+		            "from": 237,
+		            "id": 237227,
+		            "to": 227
+		        },
+		        {
+		            "from": 238,
+		            "id": 238003,
+		            "to": 3
+		        },
+		        {
+		            "from": 238,
+		            "id": 238004,
+		            "to": 4
+		        },
+		        {
+		            "from": 238,
+		            "id": 238005,
+		            "to": 5
+		        },
+		        {
+		            "from": 239,
+		            "id": 239018,
+		            "to": 18
+		        },
+		        {
+		            "from": 239,
+		            "id": 239026,
+		            "to": 26
+		        },
+		        {
+		            "from": 239,
+		            "id": 239117,
+		            "to": 117
+		        },
+		        {
+		            "from": 239,
+		            "id": 239227,
+		            "to": 227
+		        },
+		        {
+		            "from": 240,
+		            "id": 240028,
+		            "to": 28
+		        },
+		        {
+		            "from": 240,
+		            "id": 240090,
+		            "to": 90
+		        },
+		        {
+		            "from": 240,
+		            "id": 240220,
+		            "to": 220
+		        },
+		        {
+		            "from": 241,
+		            "id": 241040,
+		            "to": 40
+		        },
+		        {
+		            "from": 241,
+		            "id": 241227,
+		            "to": 227
+		        },
+		        {
+		            "from": 242,
+		            "id": 242057,
+		            "to": 57
+		        },
+		        {
+		            "from": 242,
+		            "id": 242085,
+		            "to": 85
+		        },
+		        {
+		            "from": 242,
+		            "id": 242103,
+		            "to": 103
+		        },
+		        {
+		            "from": 243,
+		            "id": 243046,
+		            "to": 46
+		        },
+		        {
+		            "from": 243,
+		            "id": 243063,
+		            "to": 63
+		        },
+		        {
+		            "from": 243,
+		            "id": 243227,
+		            "to": 227
+		        },
+		        {
+		            "from": 244,
+		            "id": 244068,
+		            "to": 68
+		        },
+		        {
+		            "from": 244,
+		            "id": 244124,
+		            "to": 124
+		        },
+		        {
+		            "from": 244,
+		            "id": 244227,
+		            "to": 227
+		        },
+		        {
+		            "from": 245,
+		            "id": 245025,
+		            "to": 25
+		        },
+		        {
+		            "from": 245,
+		            "id": 245079,
+		            "to": 79
+		        },
+		        {
+		            "from": 245,
+		            "id": 245147,
+		            "to": 147
+		        },
+		        {
+		            "from": 246,
+		            "id": 246095,
+		            "to": 95
+		        },
+		        {
+		            "from": 246,
+		            "id": 246107,
+		            "to": 107
+		        },
+		        {
+		            "from": 246,
+		            "id": 246111,
+		            "to": 111
+		        },
+		        {
+		            "from": 247,
+		            "id": 247093,
+		            "to": 93
+		        },
+		        {
+		            "from": 247,
+		            "id": 247115,
+		            "to": 115
+		        },
+		        {
+		            "from": 247,
+		            "id": 247227,
+		            "to": 227
+		        },
+		        {
+		            "from": 248,
+		            "id": 248097,
+		            "to": 97
+		        },
+		        {
+		            "from": 248,
+		            "id": 248120,
+		            "to": 120
+		        },
+		        {
+		            "from": 248,
+		            "id": 248227,
+		            "to": 227
+		        },
+		        {
+		            "from": 249,
+		            "id": 249121,
+		            "to": 121
+		        },
+		        {
+		            "from": 249,
+		            "id": 249216,
+		            "to": 216
+		        },
+		        {
+		            "from": 249,
+		            "id": 249246,
+		            "to": 246
+		        },
+		        {
+		            "from": 250,
+		            "id": 250134,
+		            "to": 134
+		        },
+		        {
+		            "from": 250,
+		            "id": 250141,
+		            "to": 141
+		        },
+		        {
+		            "from": 250,
+		            "id": 250152,
+		            "to": 152
+		        },
+		        {
+		            "from": 250,
+		            "id": 250234,
+		            "to": 234
+		        },
+		        {
+		            "from": 251,
+		            "id": 251047,
+		            "to": 47
+		        },
+		        {
+		            "from": 251,
+		            "id": 251161,
+		            "to": 161
+		        },
+		        {
+		            "from": 251,
+		            "id": 251227,
+		            "to": 227
+		        },
+		        {
+		            "from": 252,
+		            "id": 252100,
+		            "to": 100
+		        },
+		        {
+		            "from": 252,
+		            "id": 252184,
+		            "to": 184
+		        },
+		        {
+		            "from": 252,
+		            "id": 252185,
+		            "to": 185
+		        },
+		        {
+		            "from": 252,
+		            "id": 252241,
+		            "to": 241
+		        },
+		        {
+		            "from": 253,
+		            "id": 253200,
+		            "to": 200
+		        },
+		        {
+		            "from": 253,
+		            "id": 253201,
+		            "to": 201
+		        },
+		        {
+		            "from": 253,
+		            "id": 253227,
+		            "to": 227
+		        },
+		        {
+		            "from": 254,
+		            "id": 254014,
+		            "to": 14
+		        },
+		        {
+		            "from": 254,
+		            "id": 254213,
+		            "to": 213
+		        },
+		        {
+		            "from": 255,
+		            "id": 255224,
+		            "to": 224
+		        },
+		        {
+		            "from": 255,
+		            "id": 255228,
+		            "to": 228
+		        },
+		        {
+		            "from": 255,
+		            "id": 255238,
+		            "to": 238
+		        },
+		        {
+		            "from": 256,
+		            "id": 256000,
+		            "to": 0
+		        },
+		        {
+		            "from": 256,
+		            "id": 256232,
+		            "to": 232
+		        },
+		        {
+		            "from": 257,
+		            "id": 257008,
+		            "to": 8
+		        },
+		        {
+		            "from": 257,
+		            "id": 257122,
+		            "to": 122
+		        },
+		        {
+		            "from": 257,
+		            "id": 257232,
+		            "to": 232
+		        },
+		        {
+		            "from": 258,
+		            "id": 258009,
+		            "to": 9
+		        },
+		        {
+		            "from": 258,
+		            "id": 258231,
+		            "to": 231
+		        },
+		        {
+		            "from": 259,
+		            "id": 259012,
+		            "to": 12
+		        },
+		        {
+		            "from": 259,
+		            "id": 259177,
+		            "to": 177
+		        },
+		        {
+		            "from": 259,
+		            "id": 259227,
+		            "to": 227
+		        },
+		        {
+		            "from": 260,
+		            "id": 260017,
+		            "to": 17
+		        },
+		        {
+		            "from": 260,
+		            "id": 260127,
+		            "to": 127
+		        },
+		        {
+		            "from": 260,
+		            "id": 260243,
+		            "to": 243
+		        },
+		        {
+		            "from": 261,
+		            "id": 261019,
+		            "to": 19
+		        },
+		        {
+		            "from": 261,
+		            "id": 261020,
+		            "to": 20
+		        },
+		        {
+		            "from": 262,
+		            "id": 262021,
+		            "to": 21
+		        },
+		        {
+		            "from": 262,
+		            "id": 262227,
+		            "to": 227
+		        },
+		        {
+		            "from": 262,
+		            "id": 262261,
+		            "to": 261
+		        },
+		        {
+		            "from": 263,
+		            "id": 263024,
+		            "to": 24
+		        },
+		        {
+		            "from": 263,
+		            "id": 263230,
+		            "to": 230
+		        },
+		        {
+		            "from": 263,
+		            "id": 263240,
+		            "to": 240
+		        },
+		        {
+		            "from": 264,
+		            "id": 264027,
+		            "to": 27
+		        },
+		        {
+		            "from": 264,
+		            "id": 264205,
+		            "to": 205
+		        },
+		        {
+		            "from": 264,
+		            "id": 264227,
+		            "to": 227
+		        },
+		        {
+		            "from": 265,
+		            "id": 265029,
+		            "to": 29
+		        },
+		        {
+		            "from": 265,
+		            "id": 265146,
+		            "to": 146
+		        },
+		        {
+		            "from": 265,
+		            "id": 265227,
+		            "to": 227
+		        },
+		        {
+		            "from": 266,
+		            "id": 266030,
+		            "to": 30
+		        },
+		        {
+		            "from": 266,
+		            "id": 266035,
+		            "to": 35
+		        },
+		        {
+		            "from": 267,
+		            "id": 267031,
+		            "to": 31
+		        },
+		        {
+		            "from": 267,
+		            "id": 267227,
+		            "to": 227
+		        },
+		        {
+		            "from": 268,
+		            "id": 268034,
+		            "to": 34
+		        },
+		        {
+		            "from": 268,
+		            "id": 268266,
+		            "to": 266
+		        },
+		        {
+		            "from": 268,
+		            "id": 268267,
+		            "to": 267
+		        },
+		        {
+		            "from": 269,
+		            "id": 269042,
+		            "to": 42
+		        },
+		        {
+		            "from": 269,
+		            "id": 269043,
+		            "to": 43
+		        },
+		        {
+		            "from": 269,
+		            "id": 269241,
+		            "to": 241
+		        },
+		        {
+		            "from": 270,
+		            "id": 270045,
+		            "to": 45
+		        },
+		        {
+		            "from": 270,
+		            "id": 270058,
+		            "to": 58
+		        },
+		        {
+		            "from": 270,
+		            "id": 270230,
+		            "to": 230
+		        },
+		        {
+		            "from": 271,
+		            "id": 271050,
+		            "to": 50
+		        },
+		        {
+		            "from": 271,
+		            "id": 271053,
+		            "to": 53
+		        },
+		        {
+		            "from": 271,
+		            "id": 271227,
+		            "to": 227
+		        },
+		        {
+		            "from": 272,
+		            "id": 272051,
+		            "to": 51
+		        },
+		        {
+		            "from": 272,
+		            "id": 272145,
+		            "to": 145
+		        },
+		        {
+		            "from": 272,
+		            "id": 272227,
+		            "to": 227
+		        },
+		        {
+		            "from": 273,
+		            "id": 273054,
+		            "to": 54
+		        },
+		        {
+		            "from": 273,
+		            "id": 273081,
+		            "to": 81
+		        },
+		        {
+		            "from": 273,
+		            "id": 273227,
+		            "to": 227
+		        },
+		        {
+		            "from": 274,
+		            "id": 274016,
+		            "to": 16
+		        },
+		        {
+		            "from": 274,
+		            "id": 274055,
+		            "to": 55
+		        },
+		        {
+		            "from": 275,
+		            "id": 275062,
+		            "to": 62
+		        },
+		        {
+		            "from": 275,
+		            "id": 275118,
+		            "to": 118
+		        },
+		        {
+		            "from": 276,
+		            "id": 276065,
+		            "to": 65
+		        },
+		        {
+		            "from": 276,
+		            "id": 276170,
+		            "to": 170
+		        },
+		        {
+		            "from": 276,
+		            "id": 276227,
+		            "to": 227
+		        },
+		        {
+		            "from": 277,
+		            "id": 277066,
+		            "to": 66
+		        },
+		        {
+		            "from": 277,
+		            "id": 277232,
+		            "to": 232
+		        },
+		        {
+		            "from": 277,
+		            "id": 277274,
+		            "to": 274
+		        },
+		        {
+		            "from": 278,
+		            "id": 278011,
+		            "to": 11
+		        },
+		        {
+		            "from": 278,
+		            "id": 278070,
+		            "to": 70
+		        },
+		        {
+		            "from": 278,
+		            "id": 278227,
+		            "to": 227
+		        },
+		        {
+		            "from": 279,
+		            "id": 279073,
+		            "to": 73
+		        },
+		        {
+		            "from": 279,
+		            "id": 279153,
+		            "to": 153
+		        },
+		        {
+		            "from": 279,
+		            "id": 279227,
+		            "to": 227
+		        },
+		        {
+		            "from": 280,
+		            "id": 280038,
+		            "to": 38
+		        },
+		        {
+		            "from": 280,
+		            "id": 280075,
+		            "to": 75
+		        },
+		        {
+		            "from": 280,
+		            "id": 280234,
+		            "to": 234
+		        },
+		        {
+		            "from": 281,
+		            "id": 281049,
+		            "to": 49
+		        },
+		        {
+		            "from": 281,
+		            "id": 281076,
+		            "to": 76
+		        },
+		        {
+		            "from": 281,
+		            "id": 281227,
+		            "to": 227
+		        },
+		        {
+		            "from": 282,
+		            "id": 282023,
+		            "to": 23
+		        },
+		        {
+		            "from": 282,
+		            "id": 282082,
+		            "to": 82
+		        },
+		        {
+		            "from": 282,
+		            "id": 282235,
+		            "to": 235
+		        },
+		        {
+		            "from": 283,
+		            "id": 283086,
+		            "to": 86
+		        },
+		        {
+		            "from": 283,
+		            "id": 283215,
+		            "to": 215
+		        },
+		        {
+		            "from": 283,
+		            "id": 283256,
+		            "to": 256
+		        },
+		        {
+		            "from": 284,
+		            "id": 284089,
+		            "to": 89
+		        },
+		        {
+		            "from": 284,
+		            "id": 284178,
+		            "to": 178
+		        },
+		        {
+		            "from": 284,
+		            "id": 284227,
+		            "to": 227
+		        },
+		        {
+		            "from": 285,
+		            "id": 285091,
+		            "to": 91
+		        },
+		        {
+		            "from": 285,
+		            "id": 285227,
+		            "to": 227
+		        },
+		        {
+		            "from": 286,
+		            "id": 286064,
+		            "to": 64
+		        },
+		        {
+		            "from": 286,
+		            "id": 286096,
+		            "to": 96
+		        },
+		        {
+		            "from": 286,
+		            "id": 286253,
+		            "to": 253
+		        },
+		        {
+		            "from": 287,
+		            "id": 287099,
+		            "to": 99
+		        },
+		        {
+		            "from": 287,
+		            "id": 287223,
+		            "to": 223
+		        },
+		        {
+		            "from": 287,
+		            "id": 287231,
+		            "to": 231
+		        },
+		        {
+		            "from": 288,
+		            "id": 288108,
+		            "to": 108
+		        },
+		        {
+		            "from": 288,
+		            "id": 288217,
+		            "to": 217
+		        },
+		        {
+		            "from": 288,
+		            "id": 288247,
+		            "to": 247
+		        },
+		        {
+		            "from": 289,
+		            "id": 289119,
+		            "to": 119
+		        },
+		        {
+		            "from": 289,
+		            "id": 289128,
+		            "to": 128
+		        },
+		        {
+		            "from": 289,
+		            "id": 289227,
+		            "to": 227
+		        },
+		        {
+		            "from": 290,
+		            "id": 290109,
+		            "to": 109
+		        },
+		        {
+		            "from": 290,
+		            "id": 290129,
+		            "to": 129
+		        },
+		        {
+		            "from": 290,
+		            "id": 290244,
+		            "to": 244
+		        },
+		        {
+		            "from": 291,
+		            "id": 291131,
+		            "to": 131
+		        },
+		        {
+		            "from": 291,
+		            "id": 291203,
+		            "to": 203
+		        },
+		        {
+		            "from": 291,
+		            "id": 291248,
+		            "to": 248
+		        },
+		        {
+		            "from": 292,
+		            "id": 292135,
+		            "to": 135
+		        },
+		        {
+		            "from": 292,
+		            "id": 292172,
+		            "to": 172
+		        },
+		        {
+		            "from": 292,
+		            "id": 292228,
+		            "to": 228
+		        },
+		        {
+		            "from": 293,
+		            "id": 293136,
+		            "to": 136
+		        },
+		        {
+		            "from": 293,
+		            "id": 293218,
+		            "to": 218
+		        },
+		        {
+		            "from": 293,
+		            "id": 293228,
+		            "to": 228
+		        },
+		        {
+		            "from": 294,
+		            "id": 294140,
+		            "to": 140
+		        },
+		        {
+		            "from": 294,
+		            "id": 294258,
+		            "to": 258
+		        },
+		        {
+		            "from": 295,
+		            "id": 295087,
+		            "to": 87
+		        },
+		        {
+		            "from": 295,
+		            "id": 295143,
+		            "to": 143
+		        },
+		        {
+		            "from": 295,
+		            "id": 295294,
+		            "to": 294
+		        },
+		        {
+		            "from": 296,
+		            "id": 296150,
+		            "to": 150
+		        },
+		        {
+		            "from": 296,
+		            "id": 296242,
+		            "to": 242
+		        },
+		        {
+		            "from": 297,
+		            "id": 297148,
+		            "to": 148
+		        },
+		        {
+		            "from": 297,
+		            "id": 297155,
+		            "to": 155
+		        },
+		        {
+		            "from": 297,
+		            "id": 297285,
+		            "to": 285
+		        },
+		        {
+		            "from": 298,
+		            "id": 298101,
+		            "to": 101
+		        },
+		        {
+		            "from": 298,
+		            "id": 298157,
+		            "to": 157
+		        },
+		        {
+		            "from": 298,
+		            "id": 298227,
+		            "to": 227
+		        },
+		        {
+		            "from": 299,
+		            "id": 299006,
+		            "to": 6
+		        },
+		        {
+		            "from": 299,
+		            "id": 299158,
+		            "to": 158
+		        },
+		        {
+		            "from": 299,
+		            "id": 299227,
+		            "to": 227
+		        },
+		        {
+		            "from": 300,
+		            "id": 300159,
+		            "to": 159
+		        },
+		        {
+		            "from": 300,
+		            "id": 300227,
+		            "to": 227
+		        },
+		        {
+		            "from": 300,
+		            "id": 300249,
+		            "to": 249
+		        },
+		        {
+		            "from": 301,
+		            "id": 301160,
+		            "to": 160
+		        },
+		        {
+		            "from": 301,
+		            "id": 301245,
+		            "to": 245
+		        },
+		        {
+		            "from": 301,
+		            "id": 301254,
+		            "to": 254
+		        },
+		        {
+		            "from": 302,
+		            "id": 302162,
+		            "to": 162
+		        },
+		        {
+		            "from": 302,
+		            "id": 302163,
+		            "to": 163
+		        },
+		        {
+		            "from": 303,
+		            "id": 303164,
+		            "to": 164
+		        },
+		        {
+		            "from": 303,
+		            "id": 303251,
+		            "to": 251
+		        },
+		        {
+		            "from": 303,
+		            "id": 303302,
+		            "to": 302
+		        },
+		        {
+		            "from": 304,
+		            "id": 304165,
+		            "to": 165
+		        },
+		        {
+		            "from": 304,
+		            "id": 304168,
+		            "to": 168
+		        },
+		        {
+		            "from": 304,
+		            "id": 304227,
+		            "to": 227
+		        },
+		        {
+		            "from": 305,
+		            "id": 305169,
+		            "to": 169
+		        },
+		        {
+		            "from": 305,
+		            "id": 305231,
+		            "to": 231
+		        },
+		        {
+		            "from": 305,
+		            "id": 305254,
+		            "to": 254
+		        },
+		        {
+		            "from": 306,
+		            "id": 306048,
+		            "to": 48
+		        },
+		        {
+		            "from": 306,
+		            "id": 306171,
+		            "to": 171
+		        },
+		        {
+		            "from": 306,
+		            "id": 306255,
+		            "to": 255
+		        },
+		        {
+		            "from": 307,
+		            "id": 307180,
+		            "to": 180
+		        },
+		        {
+		            "from": 307,
+		            "id": 307182,
+		            "to": 182
+		        },
+		        {
+		            "from": 307,
+		            "id": 307183,
+		            "to": 183
+		        },
+		        {
+		            "from": 307,
+		            "id": 307227,
+		            "to": 227
+		        },
+		        {
+		            "from": 308,
+		            "id": 308188,
+		            "to": 188
+		        },
+		        {
+		            "from": 308,
+		            "id": 308227,
+		            "to": 227
+		        },
+		        {
+		            "from": 308,
+		            "id": 308275,
+		            "to": 275
+		        },
+		        {
+		            "from": 309,
+		            "id": 309056,
+		            "to": 56
+		        },
+		        {
+		            "from": 309,
+		            "id": 309189,
+		            "to": 189
+		        },
+		        {
+		            "from": 309,
+		            "id": 309227,
+		            "to": 227
+		        },
+		        {
+		            "from": 310,
+		            "id": 310192,
+		            "to": 192
+		        },
+		        {
+		            "from": 310,
+		            "id": 310194,
+		            "to": 194
+		        },
+		        {
+		            "from": 311,
+		            "id": 311195,
+		            "to": 195
+		        },
+		        {
+		            "from": 311,
+		            "id": 311227,
+		            "to": 227
+		        },
+		        {
+		            "from": 311,
+		            "id": 311310,
+		            "to": 310
+		        },
+		        {
+		            "from": 312,
+		            "id": 312074,
+		            "to": 74
+		        },
+		        {
+		            "from": 312,
+		            "id": 312196,
+		            "to": 196
+		        },
+		        {
+		            "from": 312,
+		            "id": 312237,
+		            "to": 237
+		        },
+		        {
+		            "from": 313,
+		            "id": 313193,
+		            "to": 193
+		        },
+		        {
+		            "from": 313,
+		            "id": 313199,
+		            "to": 199
+		        },
+		        {
+		            "from": 313,
+		            "id": 313237,
+		            "to": 237
+		        },
+		        {
+		            "from": 314,
+		            "id": 314214,
+		            "to": 214
+		        },
+		        {
+		            "from": 314,
+		            "id": 314222,
+		            "to": 222
+		        },
+		        {
+		            "from": 314,
+		            "id": 314227,
+		            "to": 227
+		        },
+		        {
+		            "from": 315,
+		            "id": 315225,
+		            "to": 225
+		        },
+		        {
+		            "from": 315,
+		            "id": 315227,
+		            "to": 227
+		        },
+		        {
+		            "from": 315,
+		            "id": 315296,
+		            "to": 296
+        }
+	];
+	break;
+	}
+
+	}
+	return Edges_TobeAdded;
+}
+
+function data_Edges_TobeRemoved(local_time_stamp){
+	switch(local_time_stamp){
+	case 0:
+	{Edges_TobeRemoved=[
+						112001,
+				        112002,
+				        112007,
+				        112010,
+				        112012,
+				        112013,
+				        112021,
+				        112022,
+				        112026,
+				        112027,
+				        112029,
+				        112031,
+				        112032,
+				        112033,
+				        112039,
+				        112040,
+				        112050,
+				        112051,
+				        112052,
+				        112054,
+				        112061,
+				        112063,
+				        112065,
+				        112068,
+				        112069,
+				        112070,
+				        112073,
+				        112076,
+				        112078,
+				        112080,
+				        112083,
+				        112084,
+				        112089,
+				        112091,
+				        112098,
+				        112102,
+				        112104,
+				        112105,
+				        112106,
+				        112110,
+				        113112,
+				        115112,
+				        120112,
+				        125112,
+				        128112,
+				        130112,
+				        132112,
+				        137112,
+				        139112,
+				        142112,
+				        144112,
+				        149112,
+				        156112,
+				        157112,
+				        158112,
+				        159112,
+				        161112,
+				        165112,
+				        173112,
+				        175112,
+				        176112,
+				        181112,
+				        182112,
+				        186112,
+				        187112,
+				        188112,
+				        189112,
+				        191112,
+				        195112,
+				        198112,
+				        201112,
+				        207112,
+				        210112,
+				        211112,
+				        212112,
+				        214112,
+				        219112,
+				        221112,
+        				225112
+	];
+	break;
+	}
+
+	case 1:
+	{Edges_TobeRemoved=[
+	104015,
+        104024,
+        104044,
+        104045,
+        104059,
+        104060,
+        104067,
+        104088,
+        104092,
+        104094,
+        114104,
+        116104,
+        123104,
+        126104,
+        135104,
+        136104,
+        138104,
+        151104,
+        167104,
+        179104,
+        190104,
+        202104,
+        206104,
+        209104,
+        224104,
+        226104];
+    break;
+    }
+
+    case 2:
+		{Edges_TobeRemoved=[
+		32009,
+		36032,
+		37032,
+		99032,
+		169032,
+		208032,
+        227032
+		];
+	    break;
+    }
+
+    case 3:
+	{Edges_TobeRemoved=[
+		219000,
+		219008,
+		219066,
+		219077,
+		219166,
+        226219
+	];
+	break;
+    }
+
+    case 4:
+		{Edges_TobeRemoved=[
+			88071,
+			88075,
+			152088,
+			154088,
+        	230088
+		];
+		break;
+    }
+
+    case 5:
+			{Edges_TobeRemoved=[
+				41039,
+				72039,
+				82039,
+        		227039
+			];
+			break;
+    		}
+
+	case 6:
+	{Edges_TobeRemoved=[
+		173133,
+		174173,
+		204173,
+        227173
+	];
+	break;
+    }
+
+	case 7:
+	{Edges_TobeRemoved=[
+		5003,
+		5004,
+		20019,
+		21019,
+		26018,
+		28024,
+		32009,
+		34030,
+		34031,
+		35030,
+		36032,
+		37032,
+		41039,
+		42040,
+		43042,
+		53050,
+		55016,
+		58045,
+		63017,
+		63046,
+		66055,
+		70011,
+		72039,
+		75038,
+		76049,
+		79025,
+		81054,
+		82023,
+		82039,
+		85057,
+		86000,
+		88071,
+		88075,
+		90028,
+		96064,
+		99032,
+		103057,
+		104015,
+		104024,
+		104044,
+		104045,
+		104059,
+		104060,
+		104067,
+		104088,
+		104092,
+		104094,
+		111095,
+		111107,
+		112001,
+		112002,
+		112007,
+		112010,
+		112012,
+		112013,
+		112021,
+		112022,
+		112026,
+		112027,
+		112029,
+		112031,
+		112032,
+		112033,
+		112039,
+		112040,
+		112050,
+		112051,
+		112052,
+		112054,
+		112061,
+		112063,
+		112065,
+		112068,
+		112069,
+		112070,
+		112073,
+		112076,
+		112078,
+		112080,
+		112083,
+		112084,
+		112089,
+		112091,
+		112098,
+		112102,
+		112104,
+		112105,
+		112106,
+		112110,
+		113112,
+		114104,
+		115093,
+		115108,
+		115112,
+		116104,
+		117026,
+		118062,
+		120097,
+		120112,
+		121111,
+		122008,
+		123104,
+		124068,
+		125112,
+		126104,
+		127017,
+		128112,
+		128119,
+		129068,
+		129109,
+		130112,
+		131120,
+		132112,
+		135104,
+		136104,
+		137112,
+		138104,
+		139112,
+		140009,
+		142112,
+		143087,
+		143140,
+		144112,
+		145051,
+		146029,
+		147079,
+		149112,
+		150057,
+		151104,
+		152088,
+		152134,
+		152141,
+		153073,
+		154088,
+		155091,
+		155148,
+		156112,
+		157101,
+		157112,
+		158006,
+		158112,
+		159112,
+		159121,
+		160079,
+		161047,
+		161112,
+		163162,
+		164161,
+		164163,
+		165112,
+		167104,
+		168165,
+		169032,
+		170065,
+		171048,
+		172135,
+		173112,
+		173133,
+		174173,
+		175112,
+		176112,
+		177012,
+		178089,
+		179104,
+		181112,
+		182112,
+		182180,
+		183180,
+		184040,
+		184100,
+		185184,
+		186112,
+		187112,
+		188062,
+		188112,
+		189056,
+		189112,
+		190104,
+		191112,
+		194192,
+		195112,
+		195192,
+		196074,
+		198112,
+		198196,
+		198197,
+		199193,
+		199198,
+		201096,
+		201112,
+		201200,
+		202104,
+		203131,
+		204173,
+		205027,
+		206104,
+		207112,
+		208032,
+		209104,
+		210112,
+		211112,
+		212112,
+		213014,
+		213160,
+		213169,
+		214112,
+		215086,
+		216121,
+		217108,
+		218136,
+		219000,
+		219008,
+		219066,
+		219077,
+		219112,
+		219166,
+		220028,
+		221112,
+		222214,
+		223099,
+		224005,
+		224104,
+		224171,
+		225112,
+		225150,
+		226104,
+		226219,
+		227012,
+		227021,
+		227026,
+		227027,
+		227029,
+		227031,
+		227032,
+		227039,
+		227040,
+		227050,
+		227051,
+		227054,
+		227063,
+		227065,
+		227068,
+		227070,
+		227073,
+		227076,
+		227089,
+		227091,
+		227115,
+		227120,
+		227128,
+		227157,
+		227158,
+		227159,
+		227161,
+		227165,
+		227173,
+		227182,
+		227188,
+		227189,
+		227195,
+		227198,
+		227201,
+		227214,
+		227225,
+		228135,
+		228136,
+		228224,
+		230024,
+		230045,
+		230088,
+		231009,
+		231099,
+		231169,
+		232000,
+		232008,
+		232066,
+		234075,
+		234152,
+        235082
+	];
+	break;
+    }
+
+	}
+	return Edges_TobeRemoved;
+}
+
+///////////
+/*var delay = 1; // 5 second delay
+var now = new Date();
+var desiredTime = new Date().setSeconds(now.getSeconds() + delay);
+
+while (now < desiredTime) {
+    now = new Date(); // update the current time
+}
+*/
+var time_stamp = 0;
+    $(window).load(function () {
+      // attach actions to the node buttons
+      $('#play').click(function(){var animationOn = setInterval(function(time_length){
+      		var Nodes_TobeAdded = data_Nodes_TobeAdded(time_stamp);
+      		var Edges_TobeAdded = data_Edges_TobeAdded(time_stamp);
+      		var Edges_TobeRemoved = data_Edges_TobeRemoved(time_stamp);
+      		for(var i = 0; i < Nodes_TobeAdded.length; i++){nodes.add(Nodes_TobeAdded[i]);}
+      		for(var i = 0; i < Edges_TobeRemoved.length; i++){edges.remove(Edges_TobeRemoved[i]);}
+      		for(var i = 0; i < Edges_TobeAdded.length; i++){edges.add(Edges_TobeAdded[i]);}
+      		time_stamp++;
+      		if(time_stamp == 8){{clearInterval(animationOn);
+      		//setTimeout(network, 3000);
+      		//setTimeout( function(){setTimeout( function(){network.focusOnNode(236,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true});} ,3000);},3000);
+      		//setTimeout( function(){setTimeout( function(){network.zoomExtent()} ,3000);},3000);
+      		//setTimeout( function(){setTimeout( function(){setTimeout( function(){network.focusOnNode(236,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true});} ,3000);} ,3000);},3000);
+      		//setTimeout( function(){network.focusOnNode(235,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true});} ,3000);
+
+
+      		}
+      		}
+        },1000);
+
+		//if (time_stamp == 9) {
+
+      });
+
+
+      $('#node-add').click(function () {
+        try {
+          nodes.add({
+            id: $('#node-id').val(),
+            label: $('#node-label').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#node-update').click(function () {
+        try {
+          nodes.update({
+            id: $('#node-id').val(),
+            label: $('#node-label').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#node-remove').click(function () {
+        try {
+          var id = $('#node-id').val();
+          nodes.remove(id);
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+
+      // attach actions to the edge buttons
+      $('#edge-add').click(function () {
+        try {
+          edges.add({
+            id: $('#edge-id').val(),
+            from: $('#edge-from').val(),
+            to: $('#edge-to').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#edge-update').click(function () {
+        try {
+          edges.update({
+            id: $('#edge-id').val(),
+            from: $('#edge-from').val(),
+            to: $('#edge-to').val()
+          });
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+      $('#edge-remove').click(function () {
+        try {
+          var id = $('#edge-id').val();
+          edges.remove(id);
+        }
+        catch (err) {
+          alert(err);
+        }
+      });
+
+      // create an array with nodes
+      nodes = new vis.DataSet();
+      nodes.subscribe('*', function () {
+        $('#nodes').html(toJSON(nodes.get()));
+      });
+      nodes.add([
+		                {
+				            "group": 1,
+				            "id": 0,
+				            "label": "intelligence",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 1,
+				            "label": "intelligenceMeasure",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 2,
+				            "label": "moralDevelTheory",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 3,
+				            "label": "moralDilemma ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 4,
+				            "label": "moralReasoning ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 5,
+				            "label": "morality ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 6,
+				            "label": "psychophysics ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 7,
+				            "label": "perception ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 8,
+				            "label": "shaping",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 9,
+				            "label": "agression ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 10,
+				            "label": "medications ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 11,
+				            "label": "lesion",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 12,
+				            "label": "intelligenceExtremes",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 13,
+				            "label": "implicitExplicit",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 14,
+				            "label": "slowFast",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 15,
+				            "label": "normative",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 16,
+				            "label": "folkScientific",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 17,
+				            "label": "attitudeImpact",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 18,
+				            "label": "attraction",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 19,
+				            "label": "brainLateralization ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 20,
+				            "label": "brainNeurogenesis ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 21,
+				            "label": "brainNeuroplasticity ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 22,
+				            "label": "develPsychology ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 23,
+				            "label": "personalityDis",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 24,
+				            "label": "psychologicalDis",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 25,
+				            "label": "relationshipMoneyHappiness ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 26,
+				            "label": "selfProphecy ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 27,
+				            "label": "temperament ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 28,
+				            "label": "prevalenceComorbidity ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 29,
+				            "label": "physiologyNeuron ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 30,
+				            "label": "moon_illusion ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 31,
+				            "label": "Wundt_illusion ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 32,
+				            "label": "JamesLangeTheory ",
+				            "links": 7
+				        },
+				        {
+				            "group": 1,
+				            "id": 33,
+				            "label": "McGurkEffect ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 34,
+				            "label": "MuellerLynn_illusion ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 35,
+				            "label": "Ponzo_illusion ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 36,
+				            "label": "SchachterSingerTheory ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 37,
+				            "label": "Forecasting ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 38,
+				            "label": "algorithms ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 39,
+				            "label": "anxietyDis",
+				            "links": 4
+				        },
+				        {
+				            "group": 1,
+				            "id": 40,
+				            "label": "anxietyDis",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 41,
+				            "label": "panicDis",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 42,
+				            "label": "phobiasDis",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 43,
+				            "label": "ptsdDis",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 44,
+				            "label": "biopsychosocialDisModel",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 45,
+				            "label": "brainIntervention",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 46,
+				            "label": "causal_attribution ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 47,
+				            "label": "assimilation_accommodation ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 48,
+				            "label": "adolescence ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 49,
+				            "label": "childhoodDis",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 50,
+				            "label": "childhoodDisControversies ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 51,
+				            "label": "humanisticPersonality ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 52,
+				            "label": "psychodynamicPersonality ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 53,
+				            "label": "evidenceDissociative ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 54,
+				            "label": "researchDesign",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 55,
+				            "label": "counterfactualThinking ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 56,
+				            "label": "neurotransmitters ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 57,
+				            "label": "eatingDis ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 58,
+				            "label": "treatmentEffectiveness",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 59,
+				            "label": "selfAwareness ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 60,
+				            "label": "endocrine",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 61,
+				            "label": "quasi_researchdesigns ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 62,
+				            "label": "flynnEffect ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 63,
+				            "label": "fundamentalAttribution ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 64,
+				            "label": "PainControl",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 65,
+				            "label": "nervousSys_gen ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 66,
+				            "label": "heuristics ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 67,
+				            "label": "infantLanguage ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 68,
+				            "label": "mentalHealth",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 69,
+				            "label": "Genetics ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 70,
+				            "label": "studyBrain ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 71,
+				            "label": "misinformation ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 72,
+				            "label": "moodDis",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 73,
+				            "label": "neurons_create_memory",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 74,
+				            "label": "old_brain_region ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 75,
+				            "label": "overconfidence ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 76,
+				            "label": "personalityDisSymp",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 77,
+				            "label": "prenatalStages ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 78,
+				            "label": "neuronsCommunicate ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 79,
+				            "label": "relationshipsHappiness ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 80,
+				            "label": "researchValidity",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 81,
+				            "label": "researchdesignTypes ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 82,
+				            "label": "schizophreniaCauses ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 83,
+				            "label": "schizophreniaSymptoms ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 84,
+				            "label": "selfConcept ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 85,
+				            "label": "sexualOrientation ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 86,
+				            "label": "socialChanges ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 87,
+				            "label": "socialFacilitation",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 88,
+				            "label": "sourceMonitoring ",
+				            "links": 5
+				        },
+				        {
+				            "group": 1,
+				            "id": 89,
+				            "label": "scientificMethod ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 90,
+				            "label": "psychologicalDisMethod",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 91,
+				            "label": "synesthesia ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 92,
+				            "label": "multiple_intelligences ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 93,
+				            "label": "traitPersonality ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 94,
+				            "label": "balance ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 95,
+				            "label": "tasteSmell ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 96,
+				            "label": "touch ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 97,
+				            "label": "treatmentStudy",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 98,
+				            "label": "motivationEmotion ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 99,
+				            "label": "emotionResponses",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 100,
+				            "label": "moodDisCauses ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 101,
+				            "label": "operantClassical ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 102,
+				            "label": "personalityDisDiff",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 103,
+				            "label": "arousalAttraction ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 104,
+				            "label": "importantQuestions ",
+				            "links": 26
+				        },
+				        {
+				            "group": 1,
+				            "id": 105,
+				            "label": "appliedResearch ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 106,
+				            "label": "brainMethodUsage ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 107,
+				            "label": "sensorineuralHearing ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 108,
+				            "label": "critiqueApproaches",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 109,
+				            "label": "psychotherapy ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 110,
+				            "label": "homeostasis_intrinsicextrinsic ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 111,
+				            "label": "place_hearing ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 112,
+				            "label": "psychology_realworld ",
+				            "links": 79
+				        },
+				        {
+				            "group": 1,
+				            "id": 113,
+				            "label": "hippocampus_amygdala_cerebellum ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 114,
+				            "label": "trialError ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 115,
+				            "label": "inventoriesDis",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 116,
+				            "label": "observational_trialError ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 117,
+				            "label": "prejudiceDiscrimination ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 118,
+				            "label": "theories_intelligence ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 119,
+				            "label": "theoriesLanguageAcquisition ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 120,
+				            "label": "psychotherapyApproaches ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 121,
+				            "label": "earStruct ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 122,
+				            "label": "reinforcementSchedules ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 123,
+				            "label": "kublerross_dying_stages ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 124,
+				            "label": "therapyAdvantages",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 125,
+				            "label": "animalStudies",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 126,
+				            "label": "attachment ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 127,
+				            "label": "behaviorsPerception ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 128,
+				            "label": "bilingualism",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 129,
+				            "label": "cbt_psychotherapy ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 130,
+				            "label": "chains2ndOrder",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 131,
+				            "label": "characteristicsPsychotherapy ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 132,
+				            "label": "conditioningParadigm ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 133,
+				            "label": "color_vision ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 134,
+				            "label": "confirmation_bias ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 135,
+				            "label": "dementiaProminentForms ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 136,
+				            "label": "eidetic_iconic_memory ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 137,
+				            "label": "elaboration_spacing",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 138,
+				            "label": "emotional_intelligence ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 139,
+				            "label": "extinction_spontaneous_recovery ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 140,
+				            "label": "humanAltruism ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 141,
+				            "label": "fixedness ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 142,
+				            "label": "generalization",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 143,
+				            "label": "groupthink_concepts_conditions ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 144,
+				            "label": "hemispheres_contralateral",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 145,
+				            "label": "molecular_genetics",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 146,
+				            "label": "neurotransmission ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 147,
+				            "label": "optimismHardiness ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 148,
+				            "label": "perceptual_constancy_perception ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 149,
+				            "label": "perspectives ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 150,
+				            "label": "physiologyHunger ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 151,
+				            "label": "relationship_intelligence_creativity ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 152,
+				            "label": "salience ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 153,
+				            "label": "prototypesRetrieval ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 154,
+				            "label": "schematicProcessing ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 155,
+				            "label": "selective_attention_perception ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 156,
+				            "label": "stereotypeThreat ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 157,
+				            "label": "stimuli_responses",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 158,
+				            "label": "transduction ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 159,
+				            "label": "wavelength_visual_spectrum ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 160,
+				            "label": "emotionCommunicated ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 161,
+				            "label": "piaget_concrete_op",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 162,
+				            "label": "piaget_formal_op",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 163,
+				            "label": "piaget_preoperational",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 164,
+				            "label": "piaget_sensorimotor",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 165,
+				            "label": "basicComponentsLanguage ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 166,
+				            "label": "behaviorsAdolescence ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 167,
+				            "label": "brainAdolescence ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 168,
+				            "label": "brainLanguage ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 169,
+				            "label": "secondaryEmotions ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 170,
+				            "label": "cns_parts",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 171,
+				            "label": "cognitiveChangesAdolescence ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 172,
+				            "label": "criticisms_Kohlberg_theory ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 173,
+				            "label": "depthPerception",
+				            "links": 4
+				        },
+				        {
+				            "group": 1,
+				            "id": 174,
+				            "label": "motionPerception",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 175,
+				            "label": "disciplines",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 176,
+				            "label": "racial_iq ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 177,
+				            "label": "features_of_vygotsky ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 178,
+				            "label": "hypothesis_characteristics ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 179,
+				            "label": "infant_reflexes ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 180,
+				            "label": "auditory_cortex ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 181,
+				            "label": "motor_cortex ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 182,
+				            "label": "somatosensory_cortex ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 183,
+				            "label": "visual_cortex ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 184,
+				            "label": "anxietyDisCauses ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 185,
+				            "label": "anxiety_dis ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 186,
+				            "label": "pnsFunctions ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 187,
+				            "label": "researchEthicalViolations ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 188,
+				            "label": "similaritiesMenWomen ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 189,
+				            "label": "specificNeurotransmitters ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 190,
+				            "label": "emotionMotivationResponse ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 191,
+				            "label": "seekingPsychotherapy ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 192,
+				            "label": "amygdala ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 193,
+				            "label": "cerebellum ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 194,
+				            "label": "hippocampus ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 195,
+				            "label": "hypothalamus ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 196,
+				            "label": "medulla ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 197,
+				            "label": "pons ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 198,
+				            "label": "reticularformation ",
+				            "links": 4
+				        },
+				        {
+				            "group": 1,
+				            "id": 199,
+				            "label": "thalamus ",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 200,
+				            "label": "neuralPathway ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 201,
+				            "label": "eyeStruct ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 202,
+				            "label": "latentLearningTolman ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 203,
+				            "label": "graphicRepresentationPsychotherapy ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 204,
+				            "label": "gestaltPrinciples ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 205,
+				            "label": "parentingStyles ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 206,
+				            "label": "intelligenceAttempts",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 207,
+				            "label": "milgramObedience",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 208,
+				            "label": "changesAdulthood ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 209,
+				            "label": "videoGames ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 210,
+				            "label": "earlySchools",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 211,
+				            "label": "philosophy",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 212,
+				            "label": "physicalSci",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 213,
+				            "label": "secondaryEmotionsRecognize",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 214,
+				            "label": "encodingRetrieval",
+				            "links": 2
+				        },
+				        {
+				            "group": 1,
+				            "id": 215,
+				            "label": "socialChangesAdulthood ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 216,
+				            "label": "hearingLoudness",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 217,
+				            "label": "neoFreudians ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 218,
+				            "label": "shorttermCapacity",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 219,
+				            "label": "organizeThemes ",
+				            "links": 6
+				        },
+				        {
+				            "group": 1,
+				            "id": 220,
+				            "label": "dsmMentalDis ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 221,
+				            "label": "lawOfEffect ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 222,
+				            "label": "ebbinghausStorage ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 223,
+				            "label": "misattributionArousal ",
+				            "links": 1
+				        },
+				        {
+				            "group": 1,
+				            "id": 224,
+				            "label": "marcias_theory ",
+				            "links": 3
+				        },
+				        {
+				            "group": 1,
+				            "id": 225,
+				            "label": "normalDistribution ",
+				            "links": 2
+        }
+      ]);
+
+      // create an array with edges
+      edges = new vis.DataSet();
+      edges.subscribe('*', function () {
+        $('#edges').html(toJSON(edges.get()));
+      });
+      edges.add([
+      			{
+		            "from": 5,
+		            "id": 5003,
+		            "to": 3
+		        },
+		        {
+		            "from": 5,
+		            "id": 5004,
+		            "to": 4
+		        },
+		        {
+		            "from": 20,
+		            "id": 20019,
+		            "to": 19
+		        },
+		        {
+		            "from": 21,
+		            "id": 21019,
+		            "to": 19
+		        },
+		        {
+		            "from": 26,
+		            "id": 26018,
+		            "to": 18
+		        },
+		        {
+		            "from": 28,
+		            "id": 28024,
+		            "to": 24
+		        },
+		        {
+		            "from": 32,
+		            "id": 32009,
+		            "to": 9
+		        },
+		        {
+		            "from": 34,
+		            "id": 34030,
+		            "to": 30
+		        },
+		        {
+		            "from": 34,
+		            "id": 34031,
+		            "to": 31
+		        },
+		        {
+		            "from": 35,
+		            "id": 35030,
+		            "to": 30
+		        },
+		        {
+		            "from": 36,
+		            "id": 36032,
+		            "to": 32
+		        },
+		        {
+		            "from": 37,
+		            "id": 37032,
+		            "to": 32
+		        },
+		        {
+		            "from": 41,
+		            "id": 41039,
+		            "to": 39
+		        },
+		        {
+		            "from": 42,
+		            "id": 42040,
+		            "to": 40
+		        },
+		        {
+		            "from": 43,
+		            "id": 43042,
+		            "to": 42
+		        },
+		        {
+		            "from": 53,
+		            "id": 53050,
+		            "to": 50
+		        },
+		        {
+		            "from": 55,
+		            "id": 55016,
+		            "to": 16
+		        },
+		        {
+		            "from": 58,
+		            "id": 58045,
+		            "to": 45
+		        },
+		        {
+		            "from": 63,
+		            "id": 63017,
+		            "to": 17
+		        },
+		        {
+		            "from": 63,
+		            "id": 63046,
+		            "to": 46
+		        },
+		        {
+		            "from": 66,
+		            "id": 66055,
+		            "to": 55
+		        },
+		        {
+		            "from": 70,
+		            "id": 70011,
+		            "to": 11
+		        },
+		        {
+		            "from": 72,
+		            "id": 72039,
+		            "to": 39
+		        },
+		        {
+		            "from": 75,
+		            "id": 75038,
+		            "to": 38
+		        },
+		        {
+		            "from": 76,
+		            "id": 76049,
+		            "to": 49
+		        },
+		        {
+		            "from": 79,
+		            "id": 79025,
+		            "to": 25
+		        },
+		        {
+		            "from": 81,
+		            "id": 81054,
+		            "to": 54
+		        },
+		        {
+		            "from": 82,
+		            "id": 82023,
+		            "to": 23
+		        },
+		        {
+		            "from": 82,
+		            "id": 82039,
+		            "to": 39
+		        },
+		        {
+		            "from": 85,
+		            "id": 85057,
+		            "to": 57
+		        },
+		        {
+		            "from": 86,
+		            "id": 86000,
+		            "to": 0
+		        },
+		        {
+		            "from": 88,
+		            "id": 88071,
+		            "to": 71
+		        },
+		        {
+		            "from": 88,
+		            "id": 88075,
+		            "to": 75
+		        },
+		        {
+		            "from": 90,
+		            "id": 90028,
+		            "to": 28
+		        },
+		        {
+		            "from": 96,
+		            "id": 96064,
+		            "to": 64
+		        },
+		        {
+		            "from": 99,
+		            "id": 99032,
+		            "to": 32
+		        },
+		        {
+		            "from": 103,
+		            "id": 103057,
+		            "to": 57
+		        },
+		        {
+		            "from": 104,
+		            "id": 104015,
+		            "to": 15
+		        },
+		        {
+		            "from": 104,
+		            "id": 104024,
+		            "to": 24
+		        },
+		        {
+		            "from": 104,
+		            "id": 104044,
+		            "to": 44
+		        },
+		        {
+		            "from": 104,
+		            "id": 104045,
+		            "to": 45
+		        },
+		        {
+		            "from": 104,
+		            "id": 104059,
+		            "to": 59
+		        },
+		        {
+		            "from": 104,
+		            "id": 104060,
+		            "to": 60
+		        },
+		        {
+		            "from": 104,
+		            "id": 104067,
+		            "to": 67
+		        },
+		        {
+		            "from": 104,
+		            "id": 104088,
+		            "to": 88
+		        },
+		        {
+		            "from": 104,
+		            "id": 104092,
+		            "to": 92
+		        },
+		        {
+		            "from": 104,
+		            "id": 104094,
+		            "to": 94
+		        },
+		        {
+		            "from": 111,
+		            "id": 111095,
+		            "to": 95
+		        },
+		        {
+		            "from": 111,
+		            "id": 111107,
+		            "to": 107
+		        },
+		        {
+		            "from": 112,
+		            "id": 112001,
+		            "to": 1
+		        },
+		        {
+		            "from": 112,
+		            "id": 112002,
+		            "to": 2
+		        },
+		        {
+		            "from": 112,
+		            "id": 112007,
+		            "to": 7
+		        },
+		        {
+		            "from": 112,
+		            "id": 112010,
+		            "to": 10
+		        },
+		        {
+		            "from": 112,
+		            "id": 112012,
+		            "to": 12
+		        },
+		        {
+		            "from": 112,
+		            "id": 112013,
+		            "to": 13
+		        },
+		        {
+		            "from": 112,
+		            "id": 112021,
+		            "to": 21
+		        },
+		        {
+		            "from": 112,
+		            "id": 112022,
+		            "to": 22
+		        },
+		        {
+		            "from": 112,
+		            "id": 112026,
+		            "to": 26
+		        },
+		        {
+		            "from": 112,
+		            "id": 112027,
+		            "to": 27
+		        },
+		        {
+		            "from": 112,
+		            "id": 112029,
+		            "to": 29
+		        },
+		        {
+		            "from": 112,
+		            "id": 112031,
+		            "to": 31
+		        },
+		        {
+		            "from": 112,
+		            "id": 112032,
+		            "to": 32
+		        },
+		        {
+		            "from": 112,
+		            "id": 112033,
+		            "to": 33
+		        },
+		        {
+		            "from": 112,
+		            "id": 112039,
+		            "to": 39
+		        },
+		        {
+		            "from": 112,
+		            "id": 112040,
+		            "to": 40
+		        },
+		        {
+		            "from": 112,
+		            "id": 112050,
+		            "to": 50
+		        },
+		        {
+		            "from": 112,
+		            "id": 112051,
+		            "to": 51
+		        },
+		        {
+		            "from": 112,
+		            "id": 112052,
+		            "to": 52
+		        },
+		        {
+		            "from": 112,
+		            "id": 112054,
+		            "to": 54
+		        },
+		        {
+		            "from": 112,
+		            "id": 112061,
+		            "to": 61
+		        },
+		        {
+		            "from": 112,
+		            "id": 112063,
+		            "to": 63
+		        },
+		        {
+		            "from": 112,
+		            "id": 112065,
+		            "to": 65
+		        },
+		        {
+		            "from": 112,
+		            "id": 112068,
+		            "to": 68
+		        },
+		        {
+		            "from": 112,
+		            "id": 112069,
+		            "to": 69
+		        },
+		        {
+		            "from": 112,
+		            "id": 112070,
+		            "to": 70
+		        },
+		        {
+		            "from": 112,
+		            "id": 112073,
+		            "to": 73
+		        },
+		        {
+		            "from": 112,
+		            "id": 112076,
+		            "to": 76
+		        },
+		        {
+		            "from": 112,
+		            "id": 112078,
+		            "to": 78
+		        },
+		        {
+		            "from": 112,
+		            "id": 112080,
+		            "to": 80
+		        },
+		        {
+		            "from": 112,
+		            "id": 112083,
+		            "to": 83
+		        },
+		        {
+		            "from": 112,
+		            "id": 112084,
+		            "to": 84
+		        },
+		        {
+		            "from": 112,
+		            "id": 112089,
+		            "to": 89
+		        },
+		        {
+		            "from": 112,
+		            "id": 112091,
+		            "to": 91
+		        },
+		        {
+		            "from": 112,
+		            "id": 112098,
+		            "to": 98
+		        },
+		        {
+		            "from": 112,
+		            "id": 112102,
+		            "to": 102
+		        },
+		        {
+		            "from": 112,
+		            "id": 112104,
+		            "to": 104
+		        },
+		        {
+		            "from": 112,
+		            "id": 112105,
+		            "to": 105
+		        },
+		        {
+		            "from": 112,
+		            "id": 112106,
+		            "to": 106
+		        },
+		        {
+		            "from": 112,
+		            "id": 112110,
+		            "to": 110
+		        },
+		        {
+		            "from": 113,
+		            "id": 113112,
+		            "to": 112
+		        },
+		        {
+		            "from": 114,
+		            "id": 114104,
+		            "to": 104
+		        },
+		        {
+		            "from": 115,
+		            "id": 115093,
+		            "to": 93
+		        },
+		        {
+		            "from": 115,
+		            "id": 115108,
+		            "to": 108
+		        },
+		        {
+		            "from": 115,
+		            "id": 115112,
+		            "to": 112
+		        },
+		        {
+		            "from": 116,
+		            "id": 116104,
+		            "to": 104
+		        },
+		        {
+		            "from": 117,
+		            "id": 117026,
+		            "to": 26
+		        },
+		        {
+		            "from": 118,
+		            "id": 118062,
+		            "to": 62
+		        },
+		        {
+		            "from": 120,
+		            "id": 120097,
+		            "to": 97
+		        },
+		        {
+		            "from": 120,
+		            "id": 120112,
+		            "to": 112
+		        },
+		        {
+		            "from": 121,
+		            "id": 121111,
+		            "to": 111
+		        },
+		        {
+		            "from": 122,
+		            "id": 122008,
+		            "to": 8
+		        },
+		        {
+		            "from": 123,
+		            "id": 123104,
+		            "to": 104
+		        },
+		        {
+		            "from": 124,
+		            "id": 124068,
+		            "to": 68
+		        },
+		        {
+		            "from": 125,
+		            "id": 125112,
+		            "to": 112
+		        },
+		        {
+		            "from": 126,
+		            "id": 126104,
+		            "to": 104
+		        },
+		        {
+		            "from": 127,
+		            "id": 127017,
+		            "to": 17
+		        },
+		        {
+		            "from": 128,
+		            "id": 128112,
+		            "to": 112
+		        },
+		        {
+		            "from": 128,
+		            "id": 128119,
+		            "to": 119
+		        },
+		        {
+		            "from": 129,
+		            "id": 129068,
+		            "to": 68
+		        },
+		        {
+		            "from": 129,
+		            "id": 129109,
+		            "to": 109
+		        },
+		        {
+		            "from": 130,
+		            "id": 130112,
+		            "to": 112
+		        },
+		        {
+		            "from": 131,
+		            "id": 131120,
+		            "to": 120
+		        },
+		        {
+		            "from": 132,
+		            "id": 132112,
+		            "to": 112
+		        },
+		        {
+		            "from": 135,
+		            "id": 135104,
+		            "to": 104
+		        },
+		        {
+		            "from": 136,
+		            "id": 136104,
+		            "to": 104
+		        },
+		        {
+		            "from": 137,
+		            "id": 137112,
+		            "to": 112
+		        },
+		        {
+		            "from": 138,
+		            "id": 138104,
+		            "to": 104
+		        },
+		        {
+		            "from": 139,
+		            "id": 139112,
+		            "to": 112
+		        },
+		        {
+		            "from": 140,
+		            "id": 140009,
+		            "to": 9
+		        },
+		        {
+		            "from": 142,
+		            "id": 142112,
+		            "to": 112
+		        },
+		        {
+		            "from": 143,
+		            "id": 143087,
+		            "to": 87
+		        },
+		        {
+		            "from": 143,
+		            "id": 143140,
+		            "to": 140
+		        },
+		        {
+		            "from": 144,
+		            "id": 144112,
+		            "to": 112
+		        },
+		        {
+		            "from": 145,
+		            "id": 145051,
+		            "to": 51
+		        },
+		        {
+		            "from": 146,
+		            "id": 146029,
+		            "to": 29
+		        },
+		        {
+		            "from": 147,
+		            "id": 147079,
+		            "to": 79
+		        },
+		        {
+		            "from": 149,
+		            "id": 149112,
+		            "to": 112
+		        },
+		        {
+		            "from": 150,
+		            "id": 150057,
+		            "to": 57
+		        },
+		        {
+		            "from": 151,
+		            "id": 151104,
+		            "to": 104
+		        },
+		        {
+		            "from": 152,
+		            "id": 152088,
+		            "to": 88
+		        },
+		        {
+		            "from": 152,
+		            "id": 152134,
+		            "to": 134
+		        },
+		        {
+		            "from": 152,
+		            "id": 152141,
+		            "to": 141
+		        },
+		        {
+		            "from": 153,
+		            "id": 153073,
+		            "to": 73
+		        },
+		        {
+		            "from": 154,
+		            "id": 154088,
+		            "to": 88
+		        },
+		        {
+		            "from": 155,
+		            "id": 155091,
+		            "to": 91
+		        },
+		        {
+		            "from": 155,
+		            "id": 155148,
+		            "to": 148
+		        },
+		        {
+		            "from": 156,
+		            "id": 156112,
+		            "to": 112
+		        },
+		        {
+		            "from": 157,
+		            "id": 157101,
+		            "to": 101
+		        },
+		        {
+		            "from": 157,
+		            "id": 157112,
+		            "to": 112
+		        },
+		        {
+		            "from": 158,
+		            "id": 158006,
+		            "to": 6
+		        },
+		        {
+		            "from": 158,
+		            "id": 158112,
+		            "to": 112
+		        },
+		        {
+		            "from": 159,
+		            "id": 159112,
+		            "to": 112
+		        },
+		        {
+		            "from": 159,
+		            "id": 159121,
+		            "to": 121
+		        },
+		        {
+		            "from": 160,
+		            "id": 160079,
+		            "to": 79
+		        },
+		        {
+		            "from": 161,
+		            "id": 161047,
+		            "to": 47
+		        },
+		        {
+		            "from": 161,
+		            "id": 161112,
+		            "to": 112
+		        },
+		        {
+		            "from": 163,
+		            "id": 163162,
+		            "to": 162
+		        },
+		        {
+		            "from": 164,
+		            "id": 164161,
+		            "to": 161
+		        },
+		        {
+		            "from": 164,
+		            "id": 164163,
+		            "to": 163
+		        },
+		        {
+		            "from": 165,
+		            "id": 165112,
+		            "to": 112
+		        },
+		        {
+		            "from": 167,
+		            "id": 167104,
+		            "to": 104
+		        },
+		        {
+		            "from": 168,
+		            "id": 168165,
+		            "to": 165
+		        },
+		        {
+		            "from": 169,
+		            "id": 169032,
+		            "to": 32
+		        },
+		        {
+		            "from": 170,
+		            "id": 170065,
+		            "to": 65
+		        },
+		        {
+		            "from": 171,
+		            "id": 171048,
+		            "to": 48
+		        },
+		        {
+		            "from": 172,
+		            "id": 172135,
+		            "to": 135
+		        },
+		        {
+		            "from": 173,
+		            "id": 173112,
+		            "to": 112
+		        },
+		        {
+		            "from": 173,
+		            "id": 173133,
+		            "to": 133
+		        },
+		        {
+		            "from": 174,
+		            "id": 174173,
+		            "to": 173
+		        },
+		        {
+		            "from": 175,
+		            "id": 175112,
+		            "to": 112
+		        },
+		        {
+		            "from": 176,
+		            "id": 176112,
+		            "to": 112
+		        },
+		        {
+		            "from": 177,
+		            "id": 177012,
+		            "to": 12
+		        },
+		        {
+		            "from": 178,
+		            "id": 178089,
+		            "to": 89
+		        },
+		        {
+		            "from": 179,
+		            "id": 179104,
+		            "to": 104
+		        },
+		        {
+		            "from": 181,
+		            "id": 181112,
+		            "to": 112
+		        },
+		        {
+		            "from": 182,
+		            "id": 182112,
+		            "to": 112
+		        },
+		        {
+		            "from": 182,
+		            "id": 182180,
+		            "to": 180
+		        },
+		        {
+		            "from": 183,
+		            "id": 183180,
+		            "to": 180
+		        },
+		        {
+		            "from": 184,
+		            "id": 184040,
+		            "to": 40
+		        },
+		        {
+		            "from": 184,
+		            "id": 184100,
+		            "to": 100
+		        },
+		        {
+		            "from": 185,
+		            "id": 185184,
+		            "to": 184
+		        },
+		        {
+		            "from": 186,
+		            "id": 186112,
+		            "to": 112
+		        },
+		        {
+		            "from": 187,
+		            "id": 187112,
+		            "to": 112
+		        },
+		        {
+		            "from": 188,
+		            "id": 188062,
+		            "to": 62
+		        },
+		        {
+		            "from": 188,
+		            "id": 188112,
+		            "to": 112
+		        },
+		        {
+		            "from": 189,
+		            "id": 189056,
+		            "to": 56
+		        },
+		        {
+		            "from": 189,
+		            "id": 189112,
+		            "to": 112
+		        },
+		        {
+		            "from": 190,
+		            "id": 190104,
+		            "to": 104
+		        },
+		        {
+		            "from": 191,
+		            "id": 191112,
+		            "to": 112
+		        },
+		        {
+		            "from": 194,
+		            "id": 194192,
+		            "to": 192
+		        },
+		        {
+		            "from": 195,
+		            "id": 195112,
+		            "to": 112
+		        },
+		        {
+		            "from": 195,
+		            "id": 195192,
+		            "to": 192
+		        },
+		        {
+		            "from": 196,
+		            "id": 196074,
+		            "to": 74
+		        },
+		        {
+		            "from": 198,
+		            "id": 198112,
+		            "to": 112
+		        },
+		        {
+		            "from": 198,
+		            "id": 198196,
+		            "to": 196
+		        },
+		        {
+		            "from": 198,
+		            "id": 198197,
+		            "to": 197
+		        },
+		        {
+		            "from": 199,
+		            "id": 199193,
+		            "to": 193
+		        },
+		        {
+		            "from": 199,
+		            "id": 199198,
+		            "to": 198
+		        },
+		        {
+		            "from": 201,
+		            "id": 201096,
+		            "to": 96
+		        },
+		        {
+		            "from": 201,
+		            "id": 201112,
+		            "to": 112
+		        },
+		        {
+		            "from": 201,
+		            "id": 201200,
+		            "to": 200
+		        },
+		        {
+		            "from": 202,
+		            "id": 202104,
+		            "to": 104
+		        },
+		        {
+		            "from": 203,
+		            "id": 203131,
+		            "to": 131
+		        },
+		        {
+		            "from": 204,
+		            "id": 204173,
+		            "to": 173
+		        },
+		        {
+		            "from": 205,
+		            "id": 205027,
+		            "to": 27
+		        },
+		        {
+		            "from": 206,
+		            "id": 206104,
+		            "to": 104
+		        },
+		        {
+		            "from": 207,
+		            "id": 207112,
+		            "to": 112
+		        },
+		        {
+		            "from": 208,
+		            "id": 208032,
+		            "to": 32
+		        },
+		        {
+		            "from": 209,
+		            "id": 209104,
+		            "to": 104
+		        },
+		        {
+		            "from": 210,
+		            "id": 210112,
+		            "to": 112
+		        },
+		        {
+		            "from": 211,
+		            "id": 211112,
+		            "to": 112
+		        },
+		        {
+		            "from": 212,
+		            "id": 212112,
+		            "to": 112
+		        },
+		        {
+		            "from": 213,
+		            "id": 213014,
+		            "to": 14
+		        },
+		        {
+		            "from": 213,
+		            "id": 213160,
+		            "to": 160
+		        },
+		        {
+		            "from": 213,
+		            "id": 213169,
+		            "to": 169
+		        },
+		        {
+		            "from": 214,
+		            "id": 214112,
+		            "to": 112
+		        },
+		        {
+		            "from": 215,
+		            "id": 215086,
+		            "to": 86
+		        },
+		        {
+		            "from": 216,
+		            "id": 216121,
+		            "to": 121
+		        },
+		        {
+		            "from": 217,
+		            "id": 217108,
+		            "to": 108
+		        },
+		        {
+		            "from": 218,
+		            "id": 218136,
+		            "to": 136
+		        },
+		        {
+		            "from": 219,
+		            "id": 219000,
+		            "to": 0
+		        },
+		        {
+		            "from": 219,
+		            "id": 219008,
+		            "to": 8
+		        },
+		        {
+		            "from": 219,
+		            "id": 219066,
+		            "to": 66
+		        },
+		        {
+		            "from": 219,
+		            "id": 219077,
+		            "to": 77
+		        },
+		        {
+		            "from": 219,
+		            "id": 219112,
+		            "to": 112
+		        },
+		        {
+		            "from": 219,
+		            "id": 219166,
+		            "to": 166
+		        },
+		        {
+		            "from": 220,
+		            "id": 220028,
+		            "to": 28
+		        },
+		        {
+		            "from": 221,
+		            "id": 221112,
+		            "to": 112
+		        },
+		        {
+		            "from": 222,
+		            "id": 222214,
+		            "to": 214
+		        },
+		        {
+		            "from": 223,
+		            "id": 223099,
+		            "to": 99
+		        },
+		        {
+		            "from": 224,
+		            "id": 224005,
+		            "to": 5
+		        },
+		        {
+		            "from": 224,
+		            "id": 224104,
+		            "to": 104
+		        },
+		        {
+		            "from": 224,
+		            "id": 224171,
+		            "to": 171
+		        },
+		        {
+		            "from": 225,
+		            "id": 225112,
+		            "to": 112
+		        },
+		        {
+		            "from": 225,
+		            "id": 225150,
+		            "to": 150
+		        }
+      ]);
+
+      // create a network
+      var container = $('#network').get(0);
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+      var options = {};
+      network = new vis.Network(container, data, options);
+    });
+
+	  var ctr = 1;
+	  function zoomIn() {
+	  	if (ctr==4){ctr=1};
+			switch(ctr){
+				case (1):
+				{setTimeout( network.focusOnNode(235,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,3000); break;}
+
+				case (2):
+				{setTimeout( network.focusOnNode(236,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,3000); break;}
+
+				case (3):
+				{setTimeout( network.focusOnNode(238,{scale:1.1 ,duration:3000, easingFunction:'linear',animation:true}) ,3000); break;}
+			}
+			ctr++;
+	  }
+
+	function zoomOut() {
+		network.zoomExtent();
+	}
+
+  </script>
+</head>
+
+<body>
+
+<h1>Unsupervised Learning of a Latent Tree Graphical Model</h1>
+<p>
+  This animation shows the first 7 iterations of Chow-Liu Recursive Grouping (CLRG) latent tree learning method and
+  the final result. The algorithm starts from the Minimal Spanning Tree (MST) and adds hidden nodes while iterating over the
+  non-leaf nodes.
+ </p>
+ <p>
+  The nodes in the tree are knowledge components covered in an online psychology course
+  on coursera. There are a total number of 226 knowledge components in the tree
+  The latent tree itself is conditioned on a set of relevant covariates. To watch the latent tree grow, press the play botton.
+</p>
+<p>
+  The blue nodes correspond to the knowledge components and their labels indicate each individual knowledge component.
+  The yellow nodes are
+  the latent (hidden) variables labeled with "h".
+  You can zoom into the tree for a closer look at the concepts and how they are grouped.
+ </p>
+
+<td><button id="play"> PLAY </button></td>
+<td><button onclick="zoomIn()"> ZOOM IN </button></td>
+<td><button onclick="zoomOut()"> ZOOM OUT </button></td>
+<br>
+</br>
+<!-- <h1>View</h1> -->
+<table class="view">
+  <colgroup>
+    <col width="90%">
+  </colgroup>
+  <tr>
+  <td>
+      <!-- <h2>Network</h2> -->
+      <div id="network"></div>
+    </td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>

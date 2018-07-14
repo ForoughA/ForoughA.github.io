@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ForoughArabshahi personal page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="owwwlab.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <meta name="description" content="A theme for faculty profile page" />
+        <meta name="keywords" content="faculty profile, theme,css, html, jquery, transition, transform, 3d, css3" />
+
+        <link rel="shortcut icon" href="../favicon.ico">
+
+        <!--CSS styles-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">  
+        <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link id="theme-style" rel="stylesheet" href="css/styles/yellow.css">
+
+        
+        <!--/CSS styles-->
+        <!--Javascript files-->
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+        
+        <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
+        <script type="text/javascript" src="js/jquery.dropdownit.js"></script>
+
+        <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+        <script type="text/javascript" src="js/masonry.min.js"></script>
+
+        <script type="text/javascript" src="js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+        
+        <script type="text/javascript" src="js/magnific-popup.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+
+        <!--/Javascript files-->
+
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <a href="#sidebar" class="mobilemenu"><i class="fa fa-reorder"></i></a>
+
+            <div id="sidebar">
+                <div id="sidebar-wrapper">
+                    <div id="sidebar-inner">
+                        <!-- Profile/logo section-->
+                        <div id="profile" class="clearfix">
+                            <div class="portrate hidden-xs"><img alt="image" src="img/profile.jpg" class="portrate hidden-xs"></div>
+                            <div class="title">
+                                <h2>Forough Arabshahi</h2>
+                                <h3>University of California Irvine</h3>
+                            </div>   
+                        </div>
+                        <!-- /Profile/logo section-->
+
+                        <!-- Main navigation-->
+                        <div id="main-nav">
+                            <ul id="navigation">
+                                <li>
+                                  <a href="index.html">
+                                    <i class="fa fa-user"></i>
+                                    <div class="text">About Me</div>
+                                  </a>
+                                </li>  
+                                
+                                <li>
+                                  <a href="research.html">
+                                    <i class="fa fa-book"></i>
+                                    <div class="text">Research</div>
+                                  </a>
+                                </li> 
+                                
+                                <li class="currentmenu">
+                                  <a href="publication.html">
+                                    <i class="fa fa-edit"></i>
+                                    <div class="text">Publications</div>
+                                  </a>
+                                </li> 
+
+                                <li>
+                                  <a href="projects.html">
+                                    <i class="fa fa-clock-o"></i>
+                                    <div class="text">Projects</div>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a href="CLTMdemos.html">
+                                    <i class="fa fa-picture-o"></i>
+                                    <div class="text">Demos</div>
+                                  </a>
+                                </li>
+
+                                <li>
+                                  <a href="contact.html">
+                                      <i class="fa fa-calendar"></i>
+                                      <div class="text">Contact Me</div>
+                                  </a>
+                                </li>
+
+                                <li class="external">
+                                  <a href="paperPDF/CV_forough.pdf">
+                                      <i class="fa fa-download"></i>
+                                      <div class="text">Download CV</div>
+                                  </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Main navigation-->
+                        <!-- Sidebar footer -->
+                        <div id="sidebar-footer">
+                            <div class="social-icons">
+                                <ul>
+                                    <li><a href="https://twitter.com/forougharabsha1?lang=en"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/forough-arabshahi-aaa06339/"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+
+        
+                            <div id="copyright">All Rights Reserved</div>
+                    
+                        </div>
+                        <!-- /Sidebar footer -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="main">
+            
+                <div id="publications" class="page">
+                    <div class="page-container">
+                        <div class="pageheader">
+                            <div class="headercontent">
+                                <div class="section-container">
+                                    <h2 class="title"></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagecontents">
+                            
+                            <div class="section color-1" id="filters">
+                                <div class="section-container">
+                                    <div class="row">
+                                        
+                                        <div class="col-md-3">
+                                            <h3>Filter by type:</h3>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+                                                <option class="filter" value="all" selected>All types</option>
+                                                <!-- <option class="filter" value="jpaper">Jounal Papers</option> -->
+                                                <option class="filter" value="cpaper">Conference Papers</option>
+                                                <!-- <option class="filter" value="bookchapter">Book Chapters</option>
+                                                <option class="filter" value="book">Books</option> -->
+                                                <!-- <option class="filter" value="report">Reports</option>
+                                                <option class="filter" value="tpaper">Technical Papers</option> -->
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-md-3" id="sort">
+                                            <span>Sort by year:</span>
+                                            <div class="btn-group pull-right"> 
+
+                                                <button type="button" data-sort="data-year" data-order="desc" class="sort btn btn-default"><i class="fa fa-sort-numeric-asc"></i></button>
+                                                <button type="button" data-sort="data-year" data-order="asc" class="sort btn btn-default"><i class="fa fa-sort-numeric-desc"></i></button>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section color-2" id="pub-grid">
+                                <div class="section-container">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="pitems">
+
+                                                <div class="item mix cpaper" data-year="2018">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            <a href="paperPDF/neuralODE.pdf" class="tooltips" title="Poster" target="_blank">
+                                                                <i class="fa fa-external-link"></i>
+                                                            </a>
+                                                            <a href="https://uclmr.github.io/nampi/extended_abstracts/arabshahi.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="fa fa-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">Towards Solving Differential Equations through Neural Programming</h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>,  Sameer Singh, Anima Anandkumar</div>
+                                                        <div class="pubcite"><span class="label label-info">Workshop Papers</span> the ICML workshop Neural Abstract Machines & Program Induction v2 (<a href="https://uclmr.github.io/nampi/">NAMPI</a>), Stockholm, Sweden, 2018</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>We propose using symbolic
+                                                        data for training neural networks that solve differential equations.This results in a generalizable and scalable neural
+                                                        solver. The main reason is that we jointly learn a large number
+                                                        of functions, that cover an entire mathematical domain,
+                                                        and use these trained functions for solving an unseen differential equation. Almost all of the literature focuses on
+                                                        hand-crafting architectures that are tailored for a specific
+                                                        type of differential equation. Moreover, they use numerical
+                                                        evaluations of a differential equation for training, which
+                                                        means that training and tuning needs to be redone for solving
+                                                        a different input differential equation resulting in a lack
+                                                        of scalability and generalizability.</p>
+                                                        <p>In this work, we investigate the possibility of using neural
+                                                        programs for solving ordinary differential equations (ODEs)
+                                                        by verifying/rejecting a candidate solution of an ODE. We
+                                                        design a neural programmer that is capable of choosing the
+                                                        correct solution with a high accuracy. Our neural programmer,
+                                                        based on a Tree-LSTM, leverages the
+                                                        compositionality of each input ODE.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="item mix cpaper" data-year="2018">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            <a href="https://github.com/ForoughA/neuralMath" class="tooltips" title="Code" target="_blank">
+                                                                <i class="fa fa-external-link"></i>
+                                                            </a>
+                                                            <a href="https://openreview.net/forum?id=Hksj2WWAW&noteId=Hksj2WWAW" class="tooltips" title="Download" target="_blank">
+                                                                <i class="fa fa-cloud-download"></i>
+                                                            </a>
+                                                        </div>
+
+                                                        <h4 class="pubtitle">Combining Symbolic Expressions and Black-box Function Evaluations in Neural Programs</h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>,  Sameer Singh, Anima Anandkumar</div>
+                                                        <div class="pubcite"><span class="label label-success">Conference Papers</span> The 6th International Conference on Learning Representations (ICLR), 2018</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Neural programming involves training neural networks to learn programs, mathematics, or logic from data. Previous works have failed to achieve good generalization performance, especially on problems and programs with high complexity or on large domains. This is because they mostly rely either on black-box function evaluations that do not capture the structure of the program, or on detailed execution traces that are expensive to obtain, and hence the training data has poor coverage of the domain under consideration. We present a novel framework that utilizes black-box function evaluations, in conjunction with symbolic expressions that define relationships between the given functions. We employ tree LSTMs to incorporate the structure of the symbolic expression trees. We use tree encoding for numbers present in function evaluation data, based on their decimal representation. We present an evaluation benchmark for this task to demonstrate our proposed model combines symbolic reasoning and function evaluation in a fruitful manner, obtaining high accuracies in our experiments. Our framework generalizes significantly better to expressions of higher depth and is able to fill partial equations with valid completions.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item mix cpaper" data-year="2017">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            </a>
+                                                            <a href="paperPDF/neuralMath.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="fa fa-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">Combining Symbolic Expressions and Black-box Function Evaluations in Neural Programs</h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>,  Sameer Singh, Anima Anandkumar</div>
+                                                        <div class="pubcite"><span class="label label-info">Workshop Papers</span> NIPS 2017, MLtrain Workshop, Long Beach, California</div>
+                                                        
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="item mix cpaper" data-year="2017">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            <a href="https://github.com/ForoughA/NID" class="tooltips" title="Code" target="_blank">
+                                                                <i class="fa fa-external-link"></i>
+                                                            </a>
+                                                            <a href="paperPDF/corrTM.pdf" class="tooltips" title="Poster" target="_blank">
+                                                                <i class="fa fa-external-link"></i>
+                                                            </a>
+                                                            <a href="http://proceedings.mlr.press/v54/arabshahi17a" class="tooltips" title="Download" target="_blank">
+                                                                <i class="fa fa-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">
+                                                            Spectral Methods for Correlated Topic Models
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>, Anima Anandkumar</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-success">Conference Papers</span> Proceedings of the 20th International Conference on Artificial Intelligence and Statistics (AISTATS), PMLR 54:1439-1447, 2017
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>In this paper we propose guaranteed spectral methods for learning a broad range of topic models, which generalize the popular Latent Dirichlet Allocation (LDA). We overcome the limitation of LDA to incorporate arbitrary topic correlations, by assuming that the hidden topic proportions are drawn from a flexible class of Normalized Infinitely Divisible (NID) distributions. NID distributions are generated by normalizing a family of independent Infinitely Divisible (ID) random variables. The Dirichlet distribution is a special case obtained by normalizing a set of Gamma random variables. We prove that this flexible topic model class can be learnt via spectral methods using only moments up to the third order, with (low order) polynomial sample and computational complexity. The proof is based on a key new technique derived here that allows us to diagonalize the moments of the NID distribution through an efficient procedure that requires evaluating only univariate integrals, despite the fact that we are handling high dimensional multivariate moments. In order to assess the performance of our proposed Latent NID topic model, we use two real datasets of articles collected from New York Times and Pubmed. Our experiments yield improved perplexity on both datasets compared with the baseline.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item mix cpaper" data-year="2015">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            <a href="https://github.com/ForoughA/NID" class="tooltips" title="Code" target="_blank">
+                                                                <i class="fa fa-external-link"></i>
+                                                            </a>
+                                                            <a href="https://arxiv.org/pdf/1411.1132.pdf" class="tooltips" title="Download" target="_blank">
+                                                                <i class="fa fa-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">
+                                                            Are You Going to the Party: Depends, Who Else is Coming?:[Learning Hidden Group Dynamics via Conditional Latent Tree Models]
+                                                        </h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>, Furong Huang, Anima Anandkumar, Carter T Butts, Sean M Fitzhugh</div>
+                                                        <div class="pubcite">
+                                                            <span class="label label-success">Conference Papers</span> Data Mining (ICDM), 2015 IEEE International Conference on (pp. 697-702). IEEE.
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>Scalable probabilistic modeling and prediction in high dimensional multivariate time-series is a challenging problem, particularly for systems with hidden sources of dependence and/or homogeneity. Examples of such problems include dynamic social networks with co-evolving nodes and edges and dynamic student learning in online courses. Here, we address these problems through the discovery of hierarchical latent groups. We introduce a family of Conditional Latent Tree Models (CLTM), in which tree-structured latent variables incorporate the unknown groups. The latent tree itself is conditioned on observed covariates such as seasonality, historical activity, and node attributes. We propose a statistically efficient framework for learning both the hierarchical tree structure and the parameters of the CLTM. We demonstrate competitive performance in multiple real world datasets from different domains. These include a dataset on students' attempts at answering questions in a psychology MOOC, Twitter users participating in an emergency management discussion and interacting with one another, and windsurfers interacting on a beach in Southern California. In addition, our modeling framework provides valuable and interpretable information about the hidden group structures and their effect on the evolution of the time series.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item mix cpaper" data-year="2015">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">Beyond LDA: Spectral Methods for Topic Modeling Based on Exchangeable Partitions</h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>,  Roi Weiss, Anima Anandkumar</div>
+                                                        <div class="pubcite"><span class="label label-info">Workshop Papers</span> NIPS workshop on Bayesian Nonparametrics: The Next Generation, 2015.</div>
+                                                        
+                                                    </div>
+                                                </div>
+
+                                                <div class="item mix cpaper" data-year="2013">
+                                                    <div class="pubmain">
+                                                        <div class="pubassets">
+                                                            
+                                                            <a href="#" class="pubcollapse">
+                                                                <i class="fa fa-expand"></i>
+                                                            </a>
+                                                            <a href="http://ieeexplore.ieee.org/abstract/document/6781908/" class="tooltips title="Download" target="_blank">
+                                                                <i class="fa fa-cloud-download"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+
+                                                        <h4 class="pubtitle">A frequency domain MVDR beamformer for UWB microwave breast cancer imaging in dispersive mediums</h4>
+                                                        <div class="pubauthor"><strong>Forough Arabshahi</strong>,  Sadaf Monajemi, Hamid Sheikhzadeh, Kaamran Raahemifar, Reza Faraji-Dana</div>
+                                                        <div class="pubcite"><span class="label label-success">Conference Paper</span> Signal Processing and Information Technology (ISSPIT), 2013 IEEE International Symposium on 2013 Dec 12 (pp. 000362-000367). IEEE</div>
+                                                        
+                                                    </div>
+                                                    <div class="pubdetails">
+                                                        <h4>Abstract</h4>
+                                                        <p>In this paper a new imaging technique for early stage ultra wideband (UWB) microwave breast cancer detection is propose  A circular array of antennas illuminates the breast tissue with UWB pulses and the bac cattered signals are then passed through a beamformer designed and applied in frequency domain. This design enables the bea ormer to compensate for non-integer delays and frequency dependent dispersion and at the same time increases the accuracy of the beamformer. It is shown that the proposed imaging algorithm reduces the computational cost and memory of the imaging system by decreasing the sampling rate to the Nyquist rate and significantly reducing the number of required matrix inversions. Furthermore, the proposed algorithm significantly improves the quali  of the obtained image and on average the signal-to-clutter ratio of the image is increased by 89.29% compared to other cases.</p>
+                                                    </div>
+                                                </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </body>
+</html>
+
