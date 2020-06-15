@@ -160,7 +160,35 @@
                                                 <div class="row">
                                                     <div class="col-sm-4 col-md-3">
                                                         <div class="image">
-                                                            <img alt="image" src="img/lab/look-up-adapt.jpg" class="img-responsive">
+                                                            <img alt="image" src="img/lab/tree-SMU.png" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="fa fa-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Tree Stack Memory Units</h3>
+                                                            <p>A recursive neural network that extrapolates to harder mathematical problems</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p> Humans have impressive problem solving abilities. For example, in the context of mathematical problem solving, once they learn the concept of addition or multiplication, they are capable of applying them to unseen numbers with arbitrary (potentially infinite) compositionality. Are neural networks also capable of doing this? We call this the capability of extrapolating to harder problems. Recursive neural networks have the potential to achieve extrapolation because they are able to capture the compositionality of tree-structured data such as mathematical equations. However, we show that recursive networks are prone to error propagation along trees of high depth and are unable to capture long range dependencies effectively.</p>
+                                                    <p> To overcome this, we propose Tree Stack Memory Units (Tree-SMUs), a novel memory augmented recursive neural network whose nodes consist of a differentiable stack. This architecture enables extrapolation by increasing the memory capacity of Tree-LSTMs by replacing the 1-dimensional memory vector of an LSTM cell with a 2-dimensional memory matrix with the data structure of a neural stack. A high level schematic of this architecture is shown in the image below.</p>
+                                                    <img alt="image" src="img/lab/tree-LSTM_tree-SMU.png" class="img-responsive">
+                                                    <p> Each SMU cell learns to read from its stack and to write to it by combining the stacks and states of its children through gating. This gating mechanism is shown in the figure below. </p>
+                                                    <img alt="image" src="img/lab/push-pop.png" class="img-responsive">
+                                                    <p> We show that this architecture allows us to achieve extrapolation to mathematical problems than are much harder than the ones seen during training. This is because this architecture improves both the local and global representation of compositional data. From a local perspective, the stack structure encourages the model to learn a better representation for functions. This is because in applications such as neural programming, most of the programs and functions can be implemented using recursion, which is often more compact and efficient compared to its iterative counterpart. This compactness makes it easier for neural networks to model them. It is known that stacks are used to implement and execute a recursive function. Therefore, having access to a stack structure encourages the model to learn a better representation for each function. Moreover, the state of each node in a recursive neural network is computed using the states of its children. From a global perspective, the stack enables each node in the Tree-SMU to also have indirect access to the state of its descendants by popping items from their stack. This helps the model to defeat error propagation by preserving values along the tree for longer. </p>
+                                                    <p>Our code and data is publicly available <a href="https://github.com/ForoughA/recursiveMemNet">here</a></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3">
+                                                        <div class="image">
+                                                            <img alt="image" src="img/lab/look-up-adapt.png" class="img-responsive">
                                                             <div class="imageoverlay">
                                                                 <i class="fa fa-search"></i>
                                                             </div>
@@ -177,7 +205,7 @@
                                                 <div class="details">
                                                     <p> Speech recognition technologies are achieving human parity. As a result, end users can now access different functionalities of their phones and computers through spoken instructions via a natural language processing interface referred to as a conversational agent. Current commercial conversational agents such as Siri, Alexa or Google Assistant come with a fixed set of simple functions like setting alarms and making reminders, but are often not able to cater to the specific phrasing of a user or the specific action a user needs. For example, assume that the user wants to add a functionality for resetting an alarm based on the weather forecast for the next day, as demonstrated by the following utterance: “whenever it snows at night, wake me up 30 minutes early”. The user can instruct this task to the agent by breaking it down into a sequence of actions that the agent already knows: 1) check the weather app, 2) see if the forecast is calling for snow, 3) if yes, then reset the time of the alarm to 30 minutes earlier. This set of instructions result in a logical form or a semantic parse for this specific new utterance. However, this approach can be used in practice only if the agent is capable of generalizing from this single new utterance to similar utterances such as “if the weather is rainy, then set an alarm for 1 hour later”. We refer to this problem as one-shot semantic parsing.</p>
                                                     <p> In this paper, we address this one-shot semantic parsing task and present a semantic parser that generalizes to out-of-domain utterances by seeing a single example from that domain. We propose "Look-up and adapt", a one-shot semantic parser, that generalizes to out-of-domain examples by learning a general strategy for parsing an unseen utterance through adapting the logical forms of seen utterances, instead of learning to generate a logical form from scratch. Our parser maintains a memory consisting of a representative subset of the seen utterances paired with their logical forms. Given an unseen utterance, our parser works by looking up a similar utterance from the memory and adapting its logical form until it fits the unseen utterance. Moreover, we present a data generation strategy for constructing utterance-logical form pairs from different domains. Our results show an improvement of up to 68.8% on one-shot parsing under two different evaluation settings compared to the baselines.</p>
-                                                    <img alt="image" src="img/lab/lookup-adapt-full.jpg" class="img-responsive">
+                                                    <img alt="image" src="img/lab/lookup-adapt-full.png" class="img-responsive">
                                                     <p>Our data is publicly available <a href="https://github.com/zhichul/lookup-and-adapt-parser-data">here</a></p>
                                                 </div>
                                             </li>
@@ -204,7 +232,7 @@
                                                     <p>We employ tree LSTMs to incorporate the symbolic expression tree, with one LSTM cell for each mathematical function. The parameters of the LSTM cells are shared across different expressions, wherever the same function is used. This weight sharing allows us to learn a large number of mathematical functions simultaneously, whereas most previous works aim at learning only one or few mathematical functions. We then extend tree LSTMs to not only accept symbolic expression input, but also numerical data from black-box function evaluations. We employ tree encoding for numbers that appear in function evaluations, based on their decimal representation. This allows our model to generalize to unseen numbers, which has been a struggle for neural programing researchers so far. We show that such a recursive neural architecture is able to generalize to unseen numbers as well as to unseen symbolic expressions.</p>
                                                     <p>The figure below shows examples of the equations in our mathematic dataset. From left to right: a symbolic equation, a function evaluation expression and a demical encoding for numbers.</p>
                                                     <img alt="image" src="img/lab/symTrees.png" class="img-responsive">
-                                                    <p>Our model is used for verifyinh the correctness of an input equation, filling a blank in an input equation and solving ordinary differential equations. Below is an example of the performance of out model on the equation filling task.</p>
+                                                    <p>Our model is used for verifyinh the correctness of an input equation, filling a blank in an input equation and solving ordinary differential equations. Below is an example of the performance of our model on the equation filling task.</p>
                                                     <img alt="image" src="img/lab/eqComp2.png" class="img-responsive">
                                                     <p>Our code and data is publicly available <a href="https://github.com/ForoughA/neuralMath">here</a></p>
                                                 </div>
