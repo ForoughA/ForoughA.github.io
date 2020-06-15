@@ -160,6 +160,31 @@
                                                 <div class="row">
                                                     <div class="col-sm-4 col-md-3">
                                                         <div class="image">
+                                                            <img alt="image" src="img/lab/look-up-adapt.jpg" class="img-responsive">
+                                                            <div class="imageoverlay">
+                                                                <i class="fa fa-search"></i>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-8 col-md-9">
+                                                        <div class="meta">
+                                                            <h3>Lookup and Adapt</h3>
+                                                            <p>A one-shot semantic parser</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="details">
+                                                    <p> Speech recognition technologies are achieving human parity. As a result, end users can now access different functionalities of their phones and computers through spoken instructions via a natural language processing interface referred to as a conversational agent. Current commercial conversational agents such as Siri, Alexa or Google Assistant come with a fixed set of simple functions like setting alarms and making reminders, but are often not able to cater to the specific phrasing of a user or the specific action a user needs. For example, assume that the user wants to add a functionality for resetting an alarm based on the weather forecast for the next day, as demonstrated by the following utterance: “whenever it snows at night, wake me up 30 minutes early”. The user can instruct this task to the agent by breaking it down into a sequence of actions that the agent already knows: 1) check the weather app, 2) see if the forecast is calling for snow, 3) if yes, then reset the time of the alarm to 30 minutes earlier. This set of instructions result in a logical form or a semantic parse for this specific new utterance. However, this approach can be used in practice only if the agent is capable of generalizing from this single new utterance to similar utterances such as “if the weather is rainy, then set an alarm for 1 hour later”. We refer to this problem as one-shot semantic parsing.</p>
+                                                    <p> In this paper, we address this one-shot semantic parsing task and present a semantic parser that generalizes to out-of-domain utterances by seeing a single example from that domain. We propose "Look-up and adapt", a one-shot semantic parser, that generalizes to out-of-domain examples by learning a general strategy for parsing an unseen utterance through adapting the logical forms of seen utterances, instead of learning to generate a logical form from scratch. Our parser maintains a memory consisting of a representative subset of the seen utterances paired with their logical forms. Given an unseen utterance, our parser works by looking up a similar utterance from the memory and adapting its logical form until it fits the unseen utterance. Moreover, we present a data generation strategy for constructing utterance-logical form pairs from different domains. Our results show an improvement of up to 68.8% on one-shot parsing under two different evaluation settings compared to the baselines.</p>
+                                                    <img alt="image" src="img/lab/lookup-adapt-full.jpg" class="img-responsive">
+                                                    <p>Our data is publicly available <a href="https://github.com/zhichul/lookup-and-adapt-parser-data">here</a></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-3">
+                                                        <div class="image">
                                                             <img alt="image" src="img/lab/sinHierarchy.jpg" class="img-responsive">
                                                             <div class="imageoverlay">
                                                                 <i class="fa fa-search"></i>
